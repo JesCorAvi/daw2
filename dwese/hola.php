@@ -13,8 +13,7 @@
         $z = 45;
         echo $x + $z;
         unset($z)
-        ?>
-        
+        ?>        
     </p>
 </body>
 </html>
