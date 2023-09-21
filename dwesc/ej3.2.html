@@ -1,22 +1,29 @@
 <!DOCTYPE HTML>
 <html>
 <title>Web page Desing</title>
+
 <head>
 <script>
 function sayHola(){
-	window.alert("Hola");
+	document.write("<ol><li><font color='red'>Hola</font></li></ol>");
 }
 function sayHello(){
-	window.alert("Hello");
+	document.write("<ol><li><font color='blue'>Hello</font></li></ol>");
 }
-function sayBonjour(){
-	window.alert("Bonjour");
+function sayпривет(){
+	document.write("<ol><li><font color='green'>привет</font></li></ol>");
 }
 </script>
 </head>
 <body>
+    <button onclick="sayHola()">
+        saludo en español
+    </button>
     <button onclick="sayHello()">
-        pulsa para sorpresa
+        saludo en ingles
+    </button>
+    <button onclick="sayпривет()">
+        saludo en Ruso
     </button>
 </body>
 </html>
