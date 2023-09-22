@@ -6,9 +6,12 @@
     <title>respuesta</title>
 </head>
 <body>
-    <?php
-    echo $_GET['dni'];
-    ?>
+    <p>Dni: <?php echo $_GET['dni'];?></p>
+    <p>Nombre: <?php echo $_GET['nombre'];?></p>
+    <p>Apellidos: <?php echo $_GET['apellidos'];?></p>
+    <p>Dirección: <?php echo $_GET['direccion'];?></p>
+    <p>Teléfono: <?php echo $_GET['telefono'];?></p>
+
 </body>
 </html>
 
