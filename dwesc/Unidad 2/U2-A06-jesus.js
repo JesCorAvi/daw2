@@ -16,8 +16,8 @@ function borrar(){
 function juego() {
     eleccion = window.prompt("¿En que numero estoy pensando?¿En el 1, 2 o 3?")
     if (parseInt(eleccion) == 3){
-        window.alert("Acertaste!!")
+        window.alert("Acertaste!!");
     } else {
-        window.alert("Prueba otra vez :(")
+        window.alert("Prueba otra vez :(");
     }
 }
