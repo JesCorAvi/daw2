@@ -23,10 +23,10 @@
             ?>><br>
         <label for="op">Operación:</label>
         <select  id="op" name="op">
-            <option <?php if (isset($_GET['op']) && $_GET['op'] == '-'){echo "selected";}?>>-</option>
-            <option <?php if (isset($_GET['op']) && $_GET['op'] == '+'){echo "selected";}?>>+</option>
-            <option <?php if (isset($_GET['op']) && $_GET['op'] == '*'){echo "selected";}?>>*</option>
-            <option <?php if (isset($_GET['op']) && $_GET['op'] == '/'){echo "selected";}?>>/</option>
+            <option <?=igual("-")?>>-</option>
+            <option <?=igual("+")?>>+</option>
+            <option <?=igual("*")?>>*</option>
+            <option <?=igual("/")?>>/</option>
         </select><br>
         <button type="submit">Calcular</button>
     </form>

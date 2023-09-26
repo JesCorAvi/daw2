@@ -65,8 +65,11 @@ function mostrar_resultado($res)
     El <strong>resultado</strong> es <strong><?= $res ?></strong>
     <?php
 }
-function mantener($ope)
-{
-    
+function igual($s){
+    if (isset($_GET['op'])){
+        if ($_GET['op'] == $s){
+            echo "selected";
+        } 
+    }
 }
 ?>
