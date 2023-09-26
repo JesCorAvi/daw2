@@ -1,6 +1,6 @@
 function nota() {    
     eleccion = window.prompt("¿Que nota sacaste?")
-    nota2 = 
+    let nota2 = "";
     (parseInt(eleccion) < 5) ? nota2 =  "Suspenso!!":
     (parseInt(eleccion) >= 5 && parseInt(eleccion) < 7) ?  nota2 = "Aprobado":
     (parseInt(eleccion) >= 7 && parseInt(eleccion) < 9) ?  nota2 = "Notable":
