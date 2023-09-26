@@ -51,13 +51,12 @@
                 $res = $op1 / $op2;
                 break;
         }
-        
     ?>
     <p>el resultado es <?= $res ?></p>
     <?php else: 
-        foreach ($errores as $error): ?>
-            <p> <?= $error ?></p>
-        <?php endforeach ?>
+        for ($i = 0; $i < count($errores); $i++): ?>
+            <p> <?= $errores[$i]?></p>
+        <?php endfor ?>
     <?php endif ?> 
     </body>
 </html>
