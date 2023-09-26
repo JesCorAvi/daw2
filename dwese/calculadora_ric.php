@@ -12,15 +12,21 @@
 
     <form action="calculadora_ric.php" method="get">
         <label for="op1">Operando 1:</label>
-        <input type="text" name="op1" id="op1" value="<?=$_GET['op1']?>"><br>
+        <input type="text" name="op1" id="op1" value=
+        <?php if (isset($_GET['op1'])){
+            echo $_GET['op1'];}
+            ?>><br>
         <label for="op2">Operando 2:</label>
-        <input type="text" name="op2" id="op2"  value="<?=$_GET['op2']?>"><br>
+        <input type="text" name="op2" id="op2"  value=
+        <?php if (isset($_GET['op2'])){
+            echo $_GET['op2'];}
+            ?>><br>
         <label for="op">Operación:</label>
-        <select  id="op" name="op" value="<?=$_GET['op']?>">
-            <option value='-'>-</option>
-            <option value='+'>+</option>
-            <option value='*'>*</option>
-            <option value='/'>/</option>
+        <select  id="op" name="op">
+            <option <?php if (isset($_GET['op']) && $_GET['op'] == '-'){echo "selected";}?>>-</option>
+            <option <?php if (isset($_GET['op']) && $_GET['op'] == '+'){echo "selected";}?>>+</option>
+            <option <?php if (isset($_GET['op']) && $_GET['op'] == '*'){echo "selected";}?>>*</option>
+            <option <?php if (isset($_GET['op']) && $_GET['op'] == '/'){echo "selected";}?>>/</option>
         </select><br>
         <button type="submit">Calcular</button>
     </form>
