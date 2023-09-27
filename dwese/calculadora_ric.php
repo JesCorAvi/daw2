@@ -9,26 +9,21 @@
 
 <body>
     <?php require 'calculadora_ric_aux.php' ?>
-
+    
     <form action="calculadora_ric.php" method="get">
         <label for="op1">Operando 1:</label>
         <input type="text" name="op1" id="op1" value=
-        <?php if (isset($_GET['op1'])){
-            echo $_GET['op1'];}
-            ?>><br>
+        <?php if (isset($_GET['op1'])){ ?>
+            <?= $_GET['op1'];}?>><br>
         <label for="op2">Operando 2:</label>
         <input type="text" name="op2" id="op2"  value=
-        <?php if (isset($_GET['op2'])){
-            echo $_GET['op2'];}
-            ?>><br>
+        <?php if (isset($_GET['op2'])){?>
+            <?= $_GET['op2'];}?>><br>
+
         <label for="op">Operación:</label>
         <select  id="op" name="op">
             <option >Seleccione una opción...</option>
-            <option <?=igual("-")?>>-</option>
-            <option <?=igual("+")?>>+</option>
-            <option <?=igual("*")?>>*</option>
-            <option <?=igual("/")?>>/</option>
-        </select><br>
+            <?= generador($opes);?>
         <button type="submit">Calcular</button>
     </form>
     <?php
