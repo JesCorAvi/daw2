@@ -23,6 +23,7 @@
             ?>><br>
         <label for="op">Operación:</label>
         <select  id="op" name="op">
+            <option >Seleccione una opción...</option>
             <option <?=igual("-")?>>-</option>
             <option <?=igual("+")?>>+</option>
             <option <?=igual("*")?>>*</option>
