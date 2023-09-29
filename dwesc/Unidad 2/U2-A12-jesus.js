@@ -1,11 +1,12 @@
 function digitos(){
     var n1 = window.prompt("dime un numero");
-    if (n1.isInteger() && n1 > 999){
-        document.getElementById("1").innerHTML = "EL numero no es válido";
+    if (n1 > 999){
+        document.write("EL numero no es válido");
     }else{
-        n1.split();
-        
+        var n2 = n1.split('');
+        for (var x in n2){
+            document.write(n2[x]+"<br>");
+        }
+    
     }
-
-
 }
