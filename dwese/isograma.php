@@ -1,7 +1,7 @@
 <?php
 /**
- * @author Ricardo Pérez <ricardo@iesdonana.org>
- * @copyright Copyright (c) 2023 Ricardo Pérez
+ * @author jesus cordero avila <jesus.cordero@iesdonana.org>
+ * @copyright Copyright (c) 2023 jesus cordero avila
  * @license https://www.gnu.org/licenses/gpl.txt
  */
 ?>
