@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fech</title>
+    <title>fecha</title>
 </head>
 
 <body>
@@ -49,9 +49,9 @@
         $año = "";
     }
 
-    function selected($option, $op)
+    function selected($opt1, $opt2)
     {
-        if ($option == $op){
+        if ($opt1 == $opt2){
             return 'selected';
         }else{
             return '';
@@ -72,7 +72,7 @@
     <select type="text" name="mes" id="mes">
     <?php
     foreach(array_keys(MESES) as $m){?>
-        <option <?php selected($mes, $m)?>><?=$m?></option><?php
+        <option value="<?=MESES[$m]?>" <?php selected($mes, MESES[$m])?>><?=$m?></option><?php
     }
     ?>
     </select><br>
@@ -91,7 +91,7 @@
         $ahora = new DateTime('now', new DateTimeZone('Europe/Madrid'));  
         $nacimiento = new DateTime("$año-$mes-$dia");  
         $edad = $ahora->diff($nacimiento);?>
-        <p>Tienes <?=$edad->format('%Y');?> años </p><?php
+        <p>Tienes <?=$edad->format('%y');?> años </p><?php
     }
     ?>
 </body>

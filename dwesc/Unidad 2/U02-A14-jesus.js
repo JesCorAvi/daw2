@@ -20,7 +20,7 @@ function dicc(){
                 boton = false;
                 break;
             default: 
-            document.write("Error, pruebe otra vez");
+            window.alert("Error, pruebe otra vez");
             break
         }
     }
