@@ -18,49 +18,81 @@
     <?php
     require 'faux.php';
     const MESES = [
-        "Enero",
-        "Febrero",
-        "Marzo",
-        "Abril",
-        "Mayo",
-        "Junio",
-        "Julio",
-        "Agosto",
-        "Septiembre",
-        "Optubre",
-        "Noviembre",
-        "Diciembre"
+        "Enero" => 1,
+        "Febrero"=> 2,
+        "Marzo"=> 3,
+        "Abril"=> 4,
+        "Mayo"=> 5,
+        "Junio"=> 6,
+        "Julio"=> 7,
+        "Agosto"=> 8,
+        "Septiembre"=> 9,
+        "Optubre"=> 10,
+        "Noviembre"=> 11,
+        "Diciembre"=> 12
     ];
+    if (isset($_GET["dia"])){
+        $dia = (int)($_GET["dia"]);
+    } else{
+        $dia = "";
+    }
+
+    if (isset($_GET["mes"])){
+        $mes = (int)($_GET["mes"]);
+    } else{
+        $mes = "";
+    }
+
+    if (isset($_GET["año"])){
+        $año = (int)($_GET["año"]);
+    } else{
+        $año = "";
+    }
+
+    function selected($option, $op)
+    {
+        if ($option == $op){
+            return 'selected';
+        }else{
+            return '';
+        }
+        ;
+    }
     ?>
     <form action="" method="get">
     <label for="dia">dia</label>
     <select type="text" name="dia" id="dia">
     <?php
-    for($x = 0;  $x <= 31;  $x++){?>
-        <option><?=$x?></option><?php
+    for($d = 1;  $d <= 31;  $d++){?>
+        <option <?php selected($dia, $d)?>><?=$d?></option><?php
     }
     ?>
     </select><br>
     <label for="mes">mes</label>
     <select type="text" name="mes" id="mes">
     <?php
-    foreach(MESES as $x){?>
-        <option><?=$x?></option><?php
+    foreach(array_keys(MESES) as $m){?>
+        <option <?php selected($mes, $m)?>><?=$m?></option><?php
     }
     ?>
     </select><br>
     <label for="año">año</label>
     <select type="text" name="año" id="año">
     <?php
-    foreach(MESES as $x){?>
-        <option><?=$x?></option><?php
+    for($y = date("Y"); $y >= (date("Y")-50); $y--){?>
+        <option <?php selected($año, $y)?>><?=$y?></option><?php
     }
     ?>
     </select><br>
     <button type="submit">analizar</button>
     </form>
+    <?php
+    if ($dia != '' && $mes != '' && $año != ''){
+        $ahora = new DateTime('now', new DateTimeZone('Europe/Madrid'));  
+        $nacimiento = new DateTime("$año-$mes-$dia");  
+        $edad = $ahora->diff($nacimiento);?>
+        <p>Tienes <?=$edad->format('%Y');?> años </p><?php
+    }
+    ?>
 </body>
-
 </html>
-
-dar la edad de la persona manteniendo los campos y dando un año minimo de 50 años antes de la fecha actual
