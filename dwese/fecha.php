@@ -16,7 +16,6 @@
 
 <body>
     <?php
-    require 'faux.php';
     const MESES = [
         "Enero" => 1,
         "Febrero"=> 2,
@@ -49,14 +48,10 @@
         $año = "";
     }
 
-    function selected($opt1, $opt2)
-    {
+    function selected($opt1, $opt2){
         if ($opt1 == $opt2){
-            return 'selected';
-        }else{
-            return '';
+            ?>selected<?php
         }
-        ;
     }
     ?>
     <form action="" method="get">
@@ -88,10 +83,13 @@
     </form>
     <?php
     if ($dia != '' && $mes != '' && $año != ''){
-        $ahora = new DateTime('now', new DateTimeZone('Europe/Madrid'));  
-        $nacimiento = new DateTime("$año-$mes-$dia");  
-        $edad = $ahora->diff($nacimiento);?>
-        <p>Tienes <?=$edad->format('%y');?> años </p><?php
+        if (checkdate($mes, $dia, $año)){
+            $ahora = new DateTime('now', new DateTimeZone('Europe/Madrid'));  
+            $nacimiento = new DateTime("$año-$mes-$dia");  
+            $edad = $ahora->diff($nacimiento);?>
+            <p>Tienes <?=$edad->format('%y');?> años </p><?php
+        }else{ ?>  <p>introduzca una fecha válida</p><?php 
+        }
     }
     ?>
 </body>
