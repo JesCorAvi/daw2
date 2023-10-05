@@ -1,7 +1,25 @@
+php -S 0.0.0.0:8000 -t .
 sudo systemctl restart postgresql
 confirurarlo con fecha iso y utc
 create extension pgcrypto
 sudo -u postgres createdb -O <bd> <user>
 sudo -u postgres createuser -P <user>
-psql -h localhost -U <user> -d <bd> ()
-(dentro de la db) !i (nombre del archivo)
+psql -h localhost -U <user> -d <bd> (-f 'ejemplo.sql)
+
+$sent = $pdo->query('SELECT * FROM departamentos');
+
+$sent = $pdo->prepare('SELECT 
+                                 FROM
+                                WHERE  :codigo');
+        $sent->execute([':codigo' => $codigo]);
+        return $sent->fetchColumn();
+
+<tbody>
+    <?php foreach ($sent as $fila): ?>
+        <tr>
+            <td><?= $fila['codigo'] ?></td>
+            <td><?= $fila['denominacion'] ?></td>
+            <td><?= $fila['localidad'] ?></td>
+        </tr>
+    <?php endforeach ?>
+</tbody>
