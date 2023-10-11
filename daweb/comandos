@@ -1,3 +1,6 @@
+(x = 1)
+sudo netplan try
+sudo netplan apply
 sudo ip link set (nombre adaptador) up/down
 sudo -c a show (nombre del adaptador)
 sudo nano /etc/dhcp/dhcpd.conf
@@ -6,4 +9,7 @@ sudo service isc-dhcp-server restart
 sudo dhclient -r (nombre de adaptador) LIBERAR IP DHCP
 sudo dhclient -v (nombre de adaptador)  OBNETER IP DHCP
 ip route list
+cambiar hostname
+	sudo nano /etc/hostname
+	sudo nano /etc/hosts
 
