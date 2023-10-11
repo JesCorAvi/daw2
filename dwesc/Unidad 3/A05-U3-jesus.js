@@ -1,7 +1,19 @@
-function edad_mil(){
-    var edad = prompt("Introduce tu edad")
-    var milis = (edad * 365 * 24 * 60 * 60 * 1000); 
-    document.write( `Tu edad en eño es ${edad}.
-                    <br> Tu edad en milisegundos es ${milis}.`)
+function formato(dato){
+    if (dato.toString().length == 1)
+        return ("" + "0" + dato.toString());
+    else{
+        return dato;
+    }
+}
+function hora(){
+    var actual = new Date();
+    var hora = formato(actual.getHours());
+    var minutos = formato(actual.getMinutes());
+    var segundos = formato(actual.getSeconds());
+    
+    if (hora > 12){
+        document.getElementById("1").innerHTML = `${hora}:${minutos}:${segundos}`
+    }else {
+        document.getElementById("1").innerHTML = `${hora}:${minutos}:${segundos}`
+    }
 };
-

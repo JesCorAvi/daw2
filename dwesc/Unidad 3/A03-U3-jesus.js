@@ -1,17 +1,13 @@
 function edad_actual(){
     var actual = new Date();
-    var fnacstr = prompt("Introduce ru fecha de nacimiento con el sigiente formato dd/mm/aaaa");
+    var fnacstr = prompt("Introduce tu fecha de nacimiento con el sigiente formato dd/mm/aaaa");
     var fnac = fnacstr.split("/");
-    var fnacObj = new Date(fnac[2],fnac[1],fnac[0]);
-    var años = actual.getFullYear() - fnacObj.getFullYear();;
-    var meses = actual.getMonth() - fnacObj.getMonth();
-    var dias = actual.getDate() - fnacObj.getDate();
-    while (dias < 0 ){
-        
-    }
-    if (meses < 0 ){
-
-    }
-    document.write(`quedan ${dias} dias, ${meses} meses y ${años} años. `)
+    var fnacObj = new Date(`${fnac[2]}-${fnac[1]}-${fnac[0]}`);
+    const diferencia = Math.abs(actual - fnacObj);
+    const dias = Math.ceil(diferencia / (1000 * 60 * 60 * 24)); 
+    const años = Math.floor(dias / 365);
+    const meses = Math.floor((dias % 365) / 30);
+    const diasRes = dias - (años * 365) - (meses * 30);
+    document.write(`Tienes ${diasRes} dias, ${meses} meses y ${años} años. `)
     };
 
