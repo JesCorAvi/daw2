@@ -5,9 +5,9 @@ function edad_actual(){
     var fnacObj = new Date(`${fnac[2]}-${fnac[1]}-${fnac[0]}`);
     const diferencia = Math.abs(actual - fnacObj);
     const dias = Math.ceil(diferencia / (1000 * 60 * 60 * 24)); 
-    const años = Math.floor(dias / 365);
-    const meses = Math.floor((dias % 365) / 30);
-    const diasRes = dias - (años * 365) - (meses * 30);
+    const años = Math.floor(dias / 365.25);
+    const meses = Math.floor((dias % 365.25) / 30);
+    const diasRes = dias - (años * 365.25) - (meses * 30);
     document.write(`Tienes ${diasRes} dias, ${meses} meses y ${años} años. `)
     };
 
