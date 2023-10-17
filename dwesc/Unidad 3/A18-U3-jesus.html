@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script src="A18-U3-jesus.js"></script>
+</head>
+<body>
+    <table border="2">
+    <tr>
+        <th colspan="4"><p id="operacion"></p> = <p id="solucion"></p></th>
+      </tr>
+      <tr>
+        <th><button onclick="valores = valores + '√'">√</button></th>
+        <th><button onclick="valores = valores + 'log'">log</button></th>
+        <th><button onclick="valores = valores + 'π'">π</button></th>
+        <th><button onclick="valores = valores + 'x³'">x³</button></th>
+      </tr>
+      <tr>
+        <th><button onclick="valores = valores + 'sin'">sin</button></th>
+        <th><button onclick="valores = valores + 'cos'">cos</button></th>
+        <th><button onclick="valores = valores + 'tan'">tan</button></th>
+        <th><button onclick="valores = valores + 'x²'">x²</button></th>
+      </tr>
+      <tr>
+        <th><button onclick="valores = '';  solucion = ''">C</button></th>
+        <th><button onclick="valores = valores + '/'">/</button></th>
+        <th><button onclick="valores = valores + '*'">*</button></th>
+        <th><button onclick="valores = valores + 'DEL'">DEL</button></th>
+      </tr>
+      <tr>
+        <th><button onclick="valores = valores + '7'">7</button></th>
+        <th><button onclick="valores = valores + '8'">8</button></th>
+        <th><button onclick="valores = valores + '9'">9</button></th>
+        <th><button onclick="valores = valores + '-'">-</button></th>
+      </tr>
+      <tr>
+        <th><button onclick="valores = valores + '4'">4</button></th>
+        <th><button onclick="valores = valores + '5'">5</button></th>
+        <th><button onclick="valores = valores + '6'">6</button></th>
+        <th><button onclick="valores = valores + '+'">+</button></th>
+      </tr>
+      <tr>
+        <th><button onclick="valores = valores + '1'">1</button></th>
+        <th><button onclick="valores = valores + '2'">2</button></th>
+        <th><button onclick="valores = valores + '3'">3</button></th>
+        <th rowspan="2"> <button onclick="calculadora(valores.slice(0), valores.slice(1), valores.slice(2))">=</button></th>
+        <script>
+            setInterval(printres, 300)
+        </script>
+      </tr>
+      <tr>
+        <th><button>0</button></th>
+        <th></th>
+        <th><button>.</button></th>
+      </tr>
+    </table>
+</body>
+</html>

@@ -9,7 +9,7 @@ function hora_utc(){
     var utc = document.getElementById("utc");
     utc = utc.options[utc.selectedIndex].value;
     var fecha = new Date();
-    var horaUTC = fecha.getHours();
+    var horaUTC = fecha.getUTCHours();
     var hora  = parseInt(horaUTC) +  parseInt(utc)
     if (hora > 23){
         var hora = hora - 24;
