@@ -1,47 +1,65 @@
 var valores = "";
+var n1 = "";
+var n2 = "";
+var ope = "";
 var solucion = "";
-valoresA = valores.split
-function calculadora(n1, ope, n2 = null){
-    if (n2 != null){
+function constructor(){
+    var boton = true;
+    for (var x of valores){
+        if (boton){
+            if !isNaN(x){
+                n1 = n1.concat(x)
+            }else{
+                ope = x;
+                boton = false;
+            }
+        }else{
+           n2 = n2.concat(x)
+        }
+    }
+}
+function calculadora(){
+    constructor();
+    if (n2 != "" ){
         switch (ope){
             case "+":
-                solucion = n1 + n2;
+                solucion = parseInt(n1) + parseInt(n2)
                 break
             case "-":
-                solucion = n1 - n2;
+                solucion = parseInt(n1) - parseInt(n2);
                 break
             case "*":
-                dsolucion = n1 * n2;
+                solucion = parseInt(n1) * parseInt(n2);
                 break
             case "/":
-                solucion = n1 / n2;
+                solucion = parseInt(n1) / parseInt(n2);
                 break;
         }
     }else{
         switch (ope){
             case "√":
-                solucion = Math.sqrt(n1);
+                solucion = Math.sqrt(parseInt(n1));
                 break
-            case "log":
-                solucion = Math.log(n1);
+            case "l":
+                solucion = Math.log(parseInt(n1));
                 break
             case "π":
-                solucion = n1 * Math.PI;
+                solucion = Math.PI;
                 break
-            case "x³":
-                solucion = n1 ** 3;
+            case "?":
+                solucion = parseInt(n1) ** 3;
                 break
-            case "sin":
-                solucion = Math.sin(n1);
+            case "s":
+                solucion = Math.sin(parseInt(n1));
                 break
-            case "cos":
-                solucion = Math.cos(n1);
+            case "c":
+                solucion = Math.cos(parseInt(n1));
                 break
-            case "tan":
-                solucion = Math.tan(n1);
+            case "t":
+                solucion = Math.tan(parseInt(n1));
                 break
-            case "x²":
-                solucion = n1 ** 2;
+            case "¿":
+                solucion = parseInt(n1) ** 2;
                 break
         }
     }
@@ -49,5 +67,6 @@ function calculadora(n1, ope, n2 = null){
 function printres(){
     document.getElementById('operacion').innerHTML = valores;
     document.getElementById('solucion').innerHTML = solucion;
+
 
 }

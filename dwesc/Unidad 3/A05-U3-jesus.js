@@ -12,8 +12,8 @@ function hora(){
     var segundos = formato(actual.getSeconds());
     
     if (hora > 12){
-        document.getElementById("1").innerHTML = `${hora}:${minutos}:${segundos}`
+        document.getElementById("1").innerHTML = `PM:${formato((hora - 12))}:${minutos}:${segundos}`
     }else {
-        document.getElementById("1").innerHTML = `${hora}:${minutos}:${segundos}`
+        document.getElementById("1").innerHTML = `AM:${hora}:${minutos}:${segundos}`
     }
 };
