@@ -7,54 +7,57 @@
     <script src="A18-U3-jesus.js"></script>
 </head>
 <body>
+  <div align="center">
     <table border="2">
     <tr>
-        <th colspan="4"><p id="operacion"></p> = <p id="solucion"></p></th>
+        <th colspan="4"><p id="operacion"></p>=<p id="solucion"></p></th>
       </tr>
       <tr>
-        <th><button onclick="valores = valores + '√'">√</button></th>
-        <th><button onclick="valores = valores + 'l'">log</button></th>
-        <th><button onclick="valores = valores + 'π'">π</button></th>
-        <th><button onclick="valores = valores + '?'">x³</button></th>
+        <th><button onclick="valores = valores + 'Math.sqrt(';repres = repres + '√('">√</button></th>
+        <th><button onclick="valores = valores + 'Math.log(';repres = repres +'log('">log</button></th>
+        <th><button onclick="valores = valores + 'Math.PI';repres = repres + 'π'">π</button></th>
+        <th><button onclick="valores = valores + '**3';repres = repres + '³'">x³</button></th>
       </tr>
       <tr>
-        <th><button onclick="valores = valores + 's'">sin</button></th>
-        <th><button onclick="valores = valores + 'c'">cos</button></th>
-        <th><button onclick="valores = valores + 't'">tan</button></th>
-        <th><button onclick="valores = valores + '¿'">x²</button></th>
+        <th><button onclick="valores = valores + 'Math.sin(';repres = repres + 'sen('">sin</button></th>
+        <th><button onclick="valores = valores + 'Math.cos(';repres = repres + 'cos('">cos</button></th>
+        <th><button onclick="valores = valores + 'Math.tan(';repres = repres + 'tan('">tan</button></th>
+        <th><button onclick="valores = valores + '**2';repres = repres + '²'">x²</button></th>
       </tr>
       <tr>
-        <th><button onclick="valores = '';  solucion = '';n1 = ''; n2 = ''; ope = ''">C</button></th>
-        <th><button onclick="valores = valores + '/'">/</button></th>
-        <th><button onclick="valores = valores + '*'">*</button></th>
-        <th><button onclick="valores = valores.slice(0,-1)">DEL</button></th>
+        <th><button onclick="valores = '';  solucion = ''; repres = ''">C</button></th>
+        <th><button onclick="valores = valores + '/';repres = repres + '/'">/</button></th>
+        <th><button onclick="valores = valores + '*';repres = repres + '*'">*</button></th>
+        <th><button onclick="valores = valores.slice(0,-1);repres = repres.slice(0,-1)">DEL</button></th>
       </tr>
       <tr>
-        <th><button onclick="valores = valores + '7'">7</button></th>
-        <th><button onclick="valores = valores + '8'">8</button></th>
-        <th><button onclick="valores = valores + '9'">9</button></th>
-        <th><button onclick="valores = valores + '-'">-</button></th>
+        <th><button onclick="valores = valores + '7';repres = repres + '7'">7</button></th>
+        <th><button onclick="valores = valores + '8';repres = repres + '8'">8</button></th>
+        <th><button onclick="valores = valores + '9';repres = repres + '9'">9</button></th>
+        <th><button onclick="valores = valores + '-';repres = repres + '-'">-</button></th>
       </tr>
       <tr>
-        <th><button onclick="valores = valores + '4'">4</button></th>
-        <th><button onclick="valores = valores + '5'">5</button></th>
-        <th><button onclick="valores = valores + '6'">6</button></th>
-        <th><button onclick="valores = valores + '+'">+</button></th>
+        <th><button onclick="valores = valores + '4';repres = repres + '4'">4</button></th>
+        <th><button onclick="valores = valores + '5';repres = repres + '5'">5</button></th>
+        <th><button onclick="valores = valores + '6';repres = repres + '6'">6</button></th>
+        <th><button onclick="valores = valores + '+';repres = repres + '+'">+</button></th>
       </tr>
       <tr>
-        <th><button onclick="valores = valores + '1'">1</button></th>
-        <th><button onclick="valores = valores + '2'">2</button></th>
-        <th><button onclick="valores = valores + '3'">3</button></th>
-        <th rowspan="2"> <button onclick="calculadora()">=</button></th>
-        <script>
-          setInterval(printres, 300)
-        </script>
+        <th><button onclick="valores = valores + '1';repres = repres + '1'">1</button></th>
+        <th><button onclick="valores = valores + '2';repres = repres + '2'">2</button></th>
+        <th><button onclick="valores = valores + '3';repres = repres + '3'">3</button></th>
+        <th rowspan="2"> <button onclick="try{calculadora()}catch(SyntaxError){solucion = 'SyntaxError'}">=</button></th>
+
       </tr>
       <tr>
-        <th><button>0</button></th>
-        <th></th>
-        <th><button>.</button></th>
+        <th><button onclick="valores = valores + '0';repres = repres + '0'">0</button></th>
+        <th><button onclick="valores = valores + ')';repres = repres + ')'">)</button></th>
+        <th><button onclick="valores = valores + '.';repres = repres + '.'">.</button></th>
       </tr>
     </table>
+    <script>
+      setInterval(printres, 100)
+    </script>
+    </div>
 </body>
 </html>
