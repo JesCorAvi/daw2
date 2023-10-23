@@ -3,7 +3,7 @@ var repres = "";
 var solucion = "";
 function calculadora(){
     solucion = eval(valores);
-    if (solucion == -Infinity || isNaN(solucion) || solucion == -Infinity){
+    if (solucion == Infinity || isNaN(solucion) || solucion == -Infinity){
         solucion = "MathError";
     }
 }
