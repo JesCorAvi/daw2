@@ -1,17 +1,22 @@
-input,
-textarea {
-    padding: 5px;
+th,
+td {
+    border: 1px solid #888;
+    padding: 10px;
+}
+
+tfoot td {
+    background: #666;
+    color: #eee;
+    border: 0;
+}
+
+table {
+    caption-side:
+        bottom;
+}
+
+tr.title th {
+    background: #000;
     color: #fff;
-}
-
-::placeholder {
-    color: darkgreen;
-}
-
-:is(input, textarea):invalid {
-    background: red;
-}
-
-:is(input, textarea):valid {
-    background: green;
+    border: 0;
 }
