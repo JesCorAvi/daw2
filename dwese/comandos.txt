@@ -5,21 +5,7 @@ create extension pgcrypto
 sudo -u postgres createuser -P <user>
 sudo -u postgres createdb -O <bd> <user>
 psql -h localhost -U <user> -d <bd> (-f 'ejemplo.sql)
-
-$sent = $pdo->query('SELECT * FROM departamentos');
-
-$sent = $pdo->prepare('SELECT 
-                                 FROM
-                                WHERE  :codigo');
-        $sent->execute([':codigo' => $codigo]);
-        return $sent->fetchColumn();
-
-<tbody>
-    <?php foreach ($sent as $fila): ?>
-        <tr>
-            <td><?= $fila['codigo'] ?></td>
-            <td><?= $fila['denominacion'] ?></td>
-            <td><?= $fila['localidad'] ?></td>
-        </tr>
-    <?php endforeach ?>
-</tbody>
+<link href="/dist/output.css" rel="stylesheet"> (en el head)
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script> (final del body)
+npm run watch
+npm install

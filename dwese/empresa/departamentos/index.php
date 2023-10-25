@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departamentos</title>
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
     <?php
@@ -11,6 +12,8 @@
 
     function mostrar_tabla(PDOStatement $sent)
     { ?>
+            <p class="text-lg font-medium"> PRUEBA DE TEXTO </P>
+
         <table border="1">
         <thead>
             <th>Código</th>
@@ -76,5 +79,6 @@
         }
     }
     ?>
+<script src="../../node_modules/path/to/flowbite/dist/flowbite.min.js"></script>
 </body>
 </html>
