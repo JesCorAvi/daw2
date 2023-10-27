@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aactividad 1</title>
+</head>
+<body>
+    <form>
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" id="dni" placeholder="11.111.111-A" pattern="^\d{2}\.\d{3}.\d{3}-[A-Z]$" required="required"></input><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Juan Antonio Pardos Galán" pattern="^\w+\s\w+(\s\w+)?(\s\w+)?$" required="required"></input><br>
+            
+        <label for="dnac">Fecha de Nacimiento:</label>
+        <input type="date" name="dnac" id="dnac" pattern="^/d{2}-/d{2}-/d{4}$" max="9999-12-31"required="required"></input><br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="ejemplo@ejemplo.com" pattern="^\w+[@]\w+\.\w+$" required="required"></input><br>
+            
+        <label for="web">WEB:</label>
+        <input type="text" name="web" id="web" placeholder="http://www.example.com" pattern="^http:\/\/www\.\w+\.\w+$" required="required"></input><br>
+            
+        <label for="passw">Contraseña:</label>
+        <input type="password" name="passw" id="passw" minlength="8" maxlength="10" required="required"><br>
+        <button type="submit">enviar</button>
+        </form>
+</body>
+</html>
