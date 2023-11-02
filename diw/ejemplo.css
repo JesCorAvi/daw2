@@ -1,22 +1,38 @@
-th,
-td {
-    border: 1px solid #888;
-    padding: 10px;
+p {
+    background-color: grey;
+}
+/* Selector etiqueta */
+.clase {
+    color: red;
+}
+/* Selector clase */
+#ident {
+    color: green;
+}
+/* Selector identificador */
+* {
+    font-style: italic;
+}
+/* Selector universal */
+p a {
+    background-color: orange;
+}
+/* Selector descendiente
+(pueden ser hijos de hijos) */
+h3,
+small {
+    color: blue;
+}
+/* Combinación de selectores */
+div>span {
+    color: pink;
+}
+/* Selector de hijos (no pueden ser
+hijos de hijos) */
+span+small {
+    background-color: yellow;
 }
 
-tfoot td {
-    background: #666;
-    color: #eee;
-    border: 0;
-}
-
-table {
-    caption-side:
-        bottom;
-}
-
-tr.title th {
-    background: #000;
-    color: #fff;
-    border: 0;
-}
+/* Selector
+adyacente */
+body { background-image: url("https://bit.ly/2slA7jo"); background-position: 100% 100%; /* 25% desde la izquierda, 75% desde arriba */ }
