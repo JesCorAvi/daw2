@@ -22,8 +22,8 @@ iframe{
 .logo{
     background-color: #000;
     color: White;
-    margin-right: 0%;
-    margin-left: 0%;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .menu{
     text-align: center;

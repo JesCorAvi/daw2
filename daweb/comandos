@@ -15,3 +15,13 @@ cambiar hostname
 	sudo nano /etc/hostname
 	sudo nano /etc/hosts
 
+
+DNS
+sudo apt install bind9
+sudo nano /etc/bind/named.conf.local
+sudo cd db.local <nombre>
+sudo service bind9 restart
+resolvectl flush-caches
+sudo cd db.127 <nombre> (inversa)
+dig -x <ip> <@dns>?
+nslookup <ip> <dns>?
