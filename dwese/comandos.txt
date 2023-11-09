@@ -20,5 +20,5 @@ LARAVEL
 composer create-project laravel/laravel <PROJECTO>
 php artisan serve
 php artisan db (entrar a la base de datos)
-
-
+composer require laravel/breeze --dev
+npm run dev

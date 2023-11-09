@@ -1,10 +1,11 @@
-*{
-    margin-right: 5%;
-    margin-left: 5%;
+main, header h1, header img{
+    margin-right: 7%;
+    margin-left: 7%;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     text-justify: inter-word;
 }
+
 iframe{
     display: block;
     margin-left: auto;
@@ -25,25 +26,31 @@ iframe{
     margin-right: 0px;
     margin-left: 0px;
 }
-.menu{
+nav{
     text-align: center;
     border-bottom: 3px solid lightgray;
     padding-top: 15px;
     padding-bottom: 15px;
     
 }
-
+li,a{
+    color: black;
+    text-decoration:none;
+    display: inline;
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 20px;
+}
+nav a:hover{
+    text-decoration: underline red;
+}
 .selected{
     text-decoration: underline red 3px;
     display: inline-block;
     ;
 
 }
-.unselected{
-    display: inline-block;
-    color: black;
-    text-decoration:none;
-}
+
 .titulo{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -63,8 +70,8 @@ iframe{
 }
 .retrato{
     border-radius: 50%;
-    width: 130%;
-    height: 130%;
+    width: 20%;
+    height: 20%;
     margin-right: 8%;
     margin-left: 8%;
     display: inline-block;
