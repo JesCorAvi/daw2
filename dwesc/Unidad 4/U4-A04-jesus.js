@@ -12,18 +12,20 @@ function encontrar(){
     var num = parseInt(prompt("Escriba un numero a buscar"));
     var indice = lista.indexOf(num);
     if (indice == -1){
-        return "No se encuentra en la lista."
+        return "no se encuentra en la lista."
     }else{
         delete sinNumero[indice];
-        return `Esta en el indice ${indice}. La lista sin ese numero ahora es ${sinNumero}`
+        return `esta en el indice ${indice}. `
     }
 }
+
 document.write(
     `
     Lista completa: ${lista}<br>
     Sumatorio de valores: ${sumatorio}<br>
     Lista inversa ${reverse}<br>
-    El numero indicado ${encontrar()}, 
+    El numero indicado ${encontrar()}, <br>
+    La lista sin ese numero ahora es ${sinNumero}, y descendente es ${sinNumero.reverse()}<br>
 
     `
 )
