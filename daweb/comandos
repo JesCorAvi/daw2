@@ -1,0 +1,27 @@
+(x = 1)
+sudo netplan try
+sudo netplan apply
+sudo ip link set (nombre adaptador) up/down	ENCENDER/APAGAR ADAPT.
+sudo -c a show (nombre del adaptador)
+sudo nano /etc/dhcp/dhcpd.conf
+sudo apt install isc-dhcp-server 
+sudo service isc-dhcp-server restart
+sudo dhclient -r (nombre de adaptador) 		LIBERAR IP DHCP
+sudo dhclient -v (nombre de adaptador)  	OBTENER IP DHCP
+ip route list | grep <"adaptador">		LISTADO P.ENLACE (GREP OPCIONAL)
+resolvectl status <adaptador>			LISTADO DNS (ADAPTADOR OPCIONAL)
+
+cambiar hostname
+	sudo nano /etc/hostname
+	sudo nano /etc/hosts
+
+
+DNS
+sudo apt install bind9
+sudo nano /etc/bind/named.conf.local
+sudo cd db.local <nombre>
+sudo service bind9 restart
+resolvectl flush-caches
+sudo cd db.127 <nombre> (inversa)
+dig -x <ip> <@dns>?
+nslookup <ip> <dns>?
