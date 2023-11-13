@@ -1,0 +1,26 @@
+php -S 0.0.0.0:8000 -t .
+configurarlo con fecha iso y utc
+sudo systemctl restart postgresql
+create extension pgcrypto
+sudo -u postgres createuser -P <user>
+sudo -u postgres createdb -O <bd> <user>
+psql -h localhost -U <user> -d <bd> (-f 'ejemplo.sql)
+sudo apt install npm
+npm install -D tailwindcss
+npx tailwindcss init
+npm install flowbite
+<link href="/dist/output.css" rel="stylesheet"> (en el head)
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script> (final del body)
+npm run watch (para autogenerr el css de flowbite)
+tailwindcss -i ./src/input.css ./dist/output.css --watch 
+npm install(para reinstalar el node-modules)
+
+LARAVEL
+
+composer create-project laravel/laravel <PROJECTO>
+php artisan serve
+php artisan db (entrar a la base de datos)
+composer require laravel/breeze --dev
+npm run dev
+php artisan make:model -c -r <NOMBRE> (CRUD)
+
