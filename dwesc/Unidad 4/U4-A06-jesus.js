@@ -7,9 +7,9 @@ function notas(){
         nota[x][3] = prompt("Escriba Su nota en Despliege de Aplicaciones Web");
     }
     console.table(nota);
-    for(let x in nota){ 
-        for(let y in x)
-        document.getElementById(toString(x)).innerHTML = `<td> ${nota[parseInt(x)][parseInt(y)]} </td>`
+    for(var registro = 0; registro < 5; registro++){ 
+        for(var dato = 0; dato < 4; dato++){
+            document.getElementById(registro).innerHTML += `<td> ${nota[registro][dato]} </td>`
+        }
     }
 }
-notas();

@@ -1,22 +1,14 @@
 var lista = [];
-var boton = true;
-while (boton){
-    var palabra = prompt("Escriba una palabra, si desea salir escriba /s")
-    if (palabra != "/s"){
-        lista.push(palabra)
-    }else{
-        boton = false
-    }
+for(let x = 0; x < 10; x++){
+    lista[x] = Math.floor(Math.random() * 10);
 }
+var menorA8 = lista.filter((x) => (x < 8));
+
+const noImpar = menorA8.map(numero => (numero % 2 !== 0) ? "impar" : numero);
 document.write(
     `
-    Todas las palabras. ${lista}<br>
-    Todas las palabras colocadas al revés: ${[...lista].reverse()}<br>
-    La primera palabra ingresada por el usuario: ${[...lista].shift()}<br>
-    La última palabra ingresada por el usuario: ${[...lista].pop()}<br>
-    El número de palabras presentes en el array: ${lista.length}<br>
-    Las palabras ordenadas de la 'a' a la 'z': ${[...lista].sort()}<br>
-    Las palabras Ordenadas de la 'z' a la 'a': ${[...lista].sort().reverse()}<br>
+    Crea un array de diez números aleatorios entre 0 y 10. ${lista} <br>
+    Devuelve un array con los valores menores a 8. ${menorA8} <br>
+    Intercambia los valores impares por la cadena “impar”.  ${noImpar}   <br>
     `
 )
-
