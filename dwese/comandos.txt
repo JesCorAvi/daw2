@@ -16,7 +16,7 @@ tailwindcss -i ./src/input.css ./dist/output.css --watch
 npm install(para reinstalar el node-modules)
 
 LARAVEL
-
+composer update (regenerar autoload...)
 composer create-project laravel/laravel <PROJECTO>
 php artisan serve
 php artisan db (entrar a la base de datos)
