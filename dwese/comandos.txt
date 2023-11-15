@@ -31,3 +31,11 @@ mv .env.example .env
 php artisan cache:clear
 composer dump-autoload
 php artisan key:generate
+
+EN EL ARCHIVO .env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=tiendalaravel
+DB_USERNAME=tiendalaravel
+DB_PASSWORD=tiendalaravel
