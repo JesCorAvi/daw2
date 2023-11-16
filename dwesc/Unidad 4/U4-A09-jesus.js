@@ -46,9 +46,23 @@ mercedes.acelerar(170);
 //que el coche de marca _, modelo_, de color_ ha arrancado.
 bmw.arrancar();
 
-Vehiculo.prototype.cilindrada = undefined;
+Vehiculo.prototype.cilindrada = 2000;
 //Asignar un nuevo método frenar. Mostrará por pantalla que el coche de marca_,
 // modelo_, color_ ha parado).
 Vehiculo.prototype.frenar = function(){
     document.write(`El coche de marca ${this.marca}, modelo ${this.modelo} y de color ${this.color} ha parado<br>`)
 }
+document.write("<h2>Con for ... in<br></h2>");
+for (let x in mercedes) {
+  document.write(x + ':', mercedes[x],"<br>");
+}
+document.write("<h2>Con getOwnPropertyNames<br></h2>");
+
+Object.getOwnPropertyNames(mercedes).forEach(x => {
+    document.write(x + ':', mercedes[x],"<br>");
+});
+document.write("<h2>Con Object.keys<br></h2>");
+
+Object.keys(mercedes).forEach(x => {
+    document.write(x + ':', mercedes[x],"<br>");
+});
