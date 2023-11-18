@@ -20,6 +20,7 @@ nav {
 main{
     background-color: #4D4C7D;
 }
+
 nav ul {
     float: right;
     list-style: none;
@@ -43,19 +44,25 @@ nav li button {
     background-color: #F99417;
     border: 1px solid #363062;
     color:#363062
-
 }
-
+.selected{
+    background-color: #c57412;
+}
 
 nav li button:hover {
     background-color: #c57412;
 }
+nav li button:active {
+    background-color: #ecb775;
+}
+
 footer {
     background-color: #363062;
     padding-top: 10px;
     width: 100%;
     height:150px;
 }
+
 footer h4{
     text-align: center;
     border-bottom:1px solid white;
@@ -77,16 +84,16 @@ footer li{
 
 article{
     margin-top: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 
 }
-
 
 .footer-titulo{
     list-style: none;
     font-weight:600;
 }
+
 #banner-index{
     background-image: 
         linear-gradient(0deg, 
@@ -105,12 +112,14 @@ article{
     color:#F99417;
     
 }
+
 #banner-index img{
     margin-top: 70px;
     transform: scale(0.5);
 }
+
 #cajaBannerIndex{
-    margin-left: 500px;
+    margin: auto;
     width: 1000px;
     height: 100px;
     background-color:rgba(0,0,0,0.5); /* where 0.5 means 50% opacity */
@@ -118,31 +127,35 @@ article{
     text-align: center;
     border-radius: 50px
 }
+
 .seccion h2{
     margin-bottom: 20px;
 }
+
 .seccion{
     margin-top: 50px;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
+
 #img-derecha{
     display: flex;
 }
 
 .seccion img{
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 30%;
     float: right;    
 }
 
 .seccion p{
     text-align: justify;
-    margin-right: 80px;
     margin-top:40px;
     margin-bottom: 50px;
+    padding-right: 20px;
     
 }
+
 #banner2-index{
     background-image: url("../img/inicio2.png");
     background-color: black;
@@ -152,13 +165,32 @@ article{
     background-size: cover;
     text-align: center;
     
-    
 }
+
 .galardon{
     display: inline-block;
     background-color: #F99417;
-    width: 400px;
+    width: 350px;
     height: 500px;
+    margin-left: 80px;
+    margin-right: 80px;
+    vertical-align: top; 
+    
+}
+.galardon h3{
     color: black;
+    margin: auto;
+
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.galardon p{
+    color: black;
+    margin: auto;
+    margin-bottom: 60px;
+    width: 200px;
+    vertical-align: top;
 
 }

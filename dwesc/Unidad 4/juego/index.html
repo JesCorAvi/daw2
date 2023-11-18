@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura</title>
+</head>
+
+<body>
+    <main id="inicio">
+        <h1>AVENTURA EJEMPLO</h1>
+        <p>
+            Has sido llamado a filas para defender tu tierra, deberás enfrentarte a varios enemigos,
+            hacerte mas fuerte y derrotar al rey corrupto que asola
+            estas tierras.
+        </p>
+        <p>
+            Pero lo primero es lo primero, ¿como te llamas?
+        </p>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        <p>
+            Buen nombre, aunque necesitarás mas que eso para hacerte fuerte. Que cualidad
+            crees que destaca en tí.
+        </p>
+        <select name="clase">
+            <option value="mago" id="mago">Soy inteligente</option>
+            <option value="guerrero" id="guerrero">Soy fuerte</option>
+            <option value="spd" id="spd">Soy rápido</option>
+        </select>
+        <p>
+            Entiendo, puedes ser util ahi fuera. Toma este equipamiento y gánate un nombre luchando.
+        </p>
+        <button onclick="(() => { crearPJ(); mostrarMain('principal'); })()">Comenzar aventura</button>
+    </main>
+    <main id="principal" hidden>
+        <p>
+            Te adentras  en un pueblo y encuentras varios lugares de interes:
+        </p>
+        <button onclick="pueblo('tienda')">Tienda</button><br>
+        <button onclick="pueblo('bosque')">Bosque</button><br>
+        <button onclick="pueblo('inventario')">Inventario</button><br>
+
+        <div id="opt"></div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
