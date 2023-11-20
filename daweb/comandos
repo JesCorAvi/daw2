@@ -25,3 +25,4 @@ resolvectl flush-caches
 sudo cd db.127 <nombre> (inversa)
 dig -x <ip> <@dns>?
 nslookup <ip> <dns>?
+sudo rndc reload
