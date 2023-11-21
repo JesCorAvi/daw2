@@ -4,6 +4,9 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+h1 {
+    color:#F99417;
+}
 
 header {
     position: fixed;
@@ -82,17 +85,18 @@ footer li{
 
 }
 
-article{
-    margin-top: 20px;
-    margin-left: 25%;
-    margin-right: 25%;
-
-}
-
 .footer-titulo{
     list-style: none;
     font-weight:600;
 }
+
+
+article{
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 
 #banner-index{
     background-image: 
@@ -108,10 +112,6 @@ article{
     text-align: center;
 }
 
-#banner-index h1{
-    color:#F99417;
-    
-}
 
 #banner-index img{
     margin-top: 70px;
@@ -128,6 +128,30 @@ article{
     border-radius: 50px
 }
 
+#bannerNosotros{
+    display: flex;
+    background-image: 
+        linear-gradient(0deg, 
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)), 
+        url("../img/sobreNosotros.png");
+    background-color: black;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+#cajaBanner{
+    margin: auto;
+    width: 300px;
+    height: 100px;
+    background-color:rgba(0,0,0,0.5); /* where 0.5 means 50% opacity */
+    line-height: 100px;
+    text-align: center;
+    border-radius: 50px
+}
 .seccion h2{
     margin-bottom: 20px;
 }
@@ -138,14 +162,19 @@ article{
     padding-bottom: 10px;
 }
 
-#img-derecha{
+.textoImagen{
     display: flex;
+    
 }
 
-.seccion img{
+.imagenDerecha{
     width: 100%;
     height: 100%;
     float: right;    
+}
+.imagenIzquierda{
+    width: 100%;
+    height: 100%;
 }
 
 .seccion p{
@@ -153,7 +182,8 @@ article{
     margin-top:40px;
     margin-bottom: 50px;
     padding-right: 20px;
-    
+    padding-left: 20px;
+
 }
 
 #banner2-index{
@@ -164,7 +194,7 @@ article{
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    
+
 }
 
 .galardon{
@@ -175,7 +205,6 @@ article{
     margin-left: 80px;
     margin-right: 80px;
     vertical-align: top; 
-    
 }
 .galardon h3{
     color: black;
@@ -192,5 +221,11 @@ article{
     margin-bottom: 60px;
     width: 200px;
     vertical-align: top;
-
+}
+.tNosotros{
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
