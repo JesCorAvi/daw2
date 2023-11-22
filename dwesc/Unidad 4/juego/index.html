@@ -31,15 +31,16 @@
         <p>
             Entiendo, puedes ser util ahi fuera. Toma este equipamiento y gánate un nombre luchando.
         </p>
-        <button onclick="(() => { crearPJ(); mostrarMain('principal'); })()">Comenzar aventura</button>
+        <button onclick="mostrarMain('principal')">Comenzar aventura</button>
     </main>
     <main id="principal" hidden>
         <p>
             Te adentras  en un pueblo y encuentras varios lugares de interes:
         </p>
-        <button onclick="pueblo('tienda')">Tienda</button><br>
-        <button onclick="pueblo('bosque')">Bosque</button><br>
-        <button onclick="pueblo('inventario')">Inventario</button><br>
+        <button onclick="menu('tienda')">Tienda</button><br>
+        <button onclick="menu('posada')">Posada</button><br>
+        <button onclick="menu('bosque')">Bosque</button><br>
+        <button onclick="menu('inventario')">Inventario</button><br>
 
         <div id="opt"></div>
     </main>
