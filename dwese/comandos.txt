@@ -27,11 +27,12 @@ php artisan make:model -c -r <NOMBRE> (CRUD)
 REGENERAR AL CLONAR DE GITHUB
 
 composer install
-mv .env.example .env
+npm install
+cp .env.example .env
 php artisan cache:clear
 composer dump-autoload
 php artisan key:generate
-npm install
+
 php artisan migrate (Exportar las tablas)
 
 
