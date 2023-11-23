@@ -288,12 +288,6 @@ input {
     display: inline-block;
 }
 
-
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-}
-
 .tooltip-text {
     visibility: hidden;
     width: 120px;
@@ -316,3 +310,15 @@ input {
     visibility: visible;
     opacity: 1;
     }
+.problemas{
+    margin: 0 auto;
+    background-color: white;
+    width: 60%;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.problemas p{
+    color:black;
+    margin: 0 auto;
+    padding: 0 auto;
+}
