@@ -4,8 +4,9 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+
 h1 {
-    color:#F99417;
+    color: #F99417;
 }
 
 header {
@@ -20,7 +21,7 @@ nav {
     margin-right: 10px;
 }
 
-main{
+main {
     background-color: #4D4C7D;
 }
 
@@ -36,25 +37,27 @@ nav li {
     display: inline;
 }
 
-nav li button {
+button {
     font-size: 1em;
     line-height: 10px;
     margin-top: 10px;
-    padding-top: 10px ;
-    padding-bottom:10px ;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
     background-color: #F99417;
     border: 1px solid #363062;
-    color:#363062
+    color: #363062
 }
-.selected{
+
+.selected {
     background-color: #c57412;
 }
 
 nav li button:hover {
     background-color: #c57412;
 }
+
 nav li button:active {
     background-color: #ecb775;
 }
@@ -63,49 +66,72 @@ footer {
     background-color: #363062;
     padding-top: 10px;
     width: 100%;
-    height:150px;
+    height: 150px;
 }
 
-footer h4{
+footer h4 {
     text-align: center;
-    border-bottom:1px solid white;
+    border-bottom: 1px solid white;
 
 }
-footer ul{
+
+footer ul {
     margin-top: 20px;
-    width:200px;
-    float:left;
+    width: 200px;
+    float: left;
     margin-left: 40px;
     padding-right: 6%;
     padding-left: 6%;
 }
 
-footer li{
+footer li {
     margin-bottom: 10px;
 
 }
 
-.footer-titulo{
+.footer-titulo {
     list-style: none;
-    font-weight:600;
+    font-weight: 600;
 }
 
 
-article{
+article {
     margin-top: 20px;
     margin-left: 20%;
     margin-right: 20%;
 }
 
+article h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
 
-#banner-index{
-    background-image: 
-        linear-gradient(0deg, 
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)), 
+fieldset {
+    margin: 0 auto;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
+
+}
+
+legend {
+    font-weight: 600;
+    margin-left: 45%;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+
+#banner-index {
+    background-image:
+        linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
         url("../img/inicio.png");
     background-color: black;
-    height:600px;
+    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,27 +139,28 @@ article{
 }
 
 
-#banner-index img{
+#banner-index img {
     margin-top: 70px;
     transform: scale(0.5);
 }
 
-#cajaBannerIndex{
+#cajaBannerIndex {
     margin: auto;
     width: 1000px;
     height: 100px;
-    background-color:rgba(0,0,0,0.5); /* where 0.5 means 50% opacity */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* where 0.5 means 50% opacity */
     line-height: 100px;
     text-align: center;
     border-radius: 50px
 }
 
-#bannerNosotros{
+#bannerNosotros {
     display: flex;
-    background-image: 
-        linear-gradient(0deg, 
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)), 
+    background-image:
+        linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
         url("../img/sobreNosotros.png");
     background-color: black;
     height: 300px;
@@ -143,53 +170,77 @@ article{
     align-items: center;
 }
 
-#cajaBanner{
+#bannerAyuda {
+    display: flex;
+    background-image:
+        linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("../img/ayuda.png");
+    background-color: black;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+#cajaBanner {
     margin: auto;
     width: 300px;
     height: 100px;
-    background-color:rgba(0,0,0,0.5); /* where 0.5 means 50% opacity */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* where 0.5 means 50% opacity */
     line-height: 100px;
     text-align: center;
     border-radius: 50px
 }
-.seccion h2{
+
+#formulario {
+    margin-left: 35%;
+    margin-right: 35%;
+
+}
+
+.seccion h2 {
     margin-bottom: 20px;
 }
 
-.seccion{
-    margin-top: 50px;
+.seccion {
+    margin-top: 40px;
     overflow: hidden;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 }
 
-.textoImagen{
+.textoImagen {
     display: flex;
-    
+
 }
 
-.imagenDerecha{
+.imagenDerecha {
     width: 100%;
     height: 100%;
-    float: right;    
+    float: right;
 }
-.imagenIzquierda{
+
+.imagenIzquierda {
     width: 100%;
     height: 100%;
 }
 
-.seccion p{
+.seccion p {
     text-align: justify;
-    margin-top:40px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10;
     padding-right: 20px;
     padding-left: 20px;
 
 }
 
-#banner2-index{
+#banner2-index {
     background-image: url("../img/inicio2.png");
     background-color: black;
-    height:600px;
+    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -197,16 +248,17 @@ article{
 
 }
 
-.galardon{
+.galardon {
     display: inline-block;
     background-color: #F99417;
     width: 350px;
     height: 500px;
     margin-left: 80px;
     margin-right: 80px;
-    vertical-align: top; 
+    vertical-align: top;
 }
-.galardon h3{
+
+.galardon h3 {
     color: black;
     margin: auto;
 
@@ -215,17 +267,52 @@ article{
     margin-bottom: 40px;
 }
 
-.galardon p{
+.galardon p {
     color: black;
     margin: auto;
     margin-bottom: 60px;
     width: 200px;
     vertical-align: top;
 }
-.tNosotros{
+
+.tNosotros {
     text-align: center;
     border-bottom: 2px solid white;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
 }
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #363062;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* Posiciona el tooltip encima
+        del elemento */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    }

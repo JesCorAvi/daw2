@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aventura</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <p>
             Pero lo primero es lo primero, ¿como te llamas?
         </p>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        <input type="text" id="nombre" name="nombre" placeholder="Introduze tu nombre">
         <p>
             Buen nombre, aunque necesitarás mas que eso para hacerte fuerte. Que cualidad
             crees que destaca en tí.
@@ -34,15 +35,41 @@
         <button onclick="mostrarMain('principal')">Comenzar aventura</button>
     </main>
     <main id="principal" hidden>
-        <p>
-            Te adentras  en un pueblo y encuentras varios lugares de interes:
-        </p>
-        <button onclick="menu('tienda')">Tienda</button><br>
-        <button onclick="menu('posada')">Posada</button><br>
-        <button onclick="menu('bosque')">Bosque</button><br>
-        <button onclick="menu('inventario')">Inventario</button><br>
-
+        <div class="barra">
+            <p>
+                <strong>Te adentras  en un pueblo y encuentras varios lugares de interés:</strong>
+            </p>
+            <button onclick="menu('tienda')">Tienda</button>
+            <button onclick="menu('posada')">Posada</button>
+            <button onclick="menu('bosque')">Bosque</button>
+            <button onclick="menu('informacion')">Información</button><br>
+        </div>
         <div id="opt"></div>
+        <div id="tienda" hidden>
+            ¿Que deseas comprar?<br>
+            Mejorar arma. Precio 500 monedas.
+            <button onclick="protagonista.compraArma('Espada de soldado')">Comprar</button><br>
+            Mejorar armadura. Precio 500 monedas.
+            <button onclick="protagonista.compraArmadura('Ropajes reforzados')">Comprar</button> 
+            <br><br>  
+            <button onclick="document.getElementById('tienda').setAttribute('hidden', true)">
+            Salir
+            </button>       
+
+        </div>
+        <div id="informacion" hidden>
+            <p id="nom"></p>            
+            <p id="clase"></p>            
+            <p id="nivel"></p>            
+            <p id="arma"></p>            
+            <p id="armadura"></p>            
+            <p id="monedas"></p>            
+            <p id="pociones"></p>   
+            <br>
+            <button onclick="document.getElementById('informacion').setAttribute('hidden', true)">
+            Salir
+            </button>       
+        </div>
     </main>
     <script src="scripts.js"></script>
 </body>

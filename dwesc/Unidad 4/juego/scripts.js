@@ -3,14 +3,19 @@ const clase = document.querySelector('select[name="clase"]').value;
 
 const armas = {
     "Espada oxidada": 10,
-    "Bastón de iniciado": 10,
     "Espada de soldado": 30,
-    "Libro de hechizos": 30
 };
 const armaduras = {
     "Ropajes de aventurero": 10,
     "Ropajes reforzados": 30
 };
+const conf = {
+    "posada":5,
+    "monedas":"enemy.stat['fuerza'] / 2",
+    "exp":"50 + enemy.stat['fuerza']",
+    "daño":"getRandomInt(enemy.stat['fuerza'] / 3)"
+}
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -18,8 +23,17 @@ function personaje(nombre, clase, arma, armadura, nivel) {
     this.nivel = nivel;
     this.nombre = nombre;
     this.clase = clase;
-    this.equip = { "arma": arma, "armadura": armadura, "monedas": 500, "pociones": 0 };
-    this.stat = { "fuerza": armas[arma] + (nivel * 5), "hp": 100 + (nivel * 10), "experiencia": 0 };
+    this.equip = { 
+        "arma": arma, 
+        "armadura": armadura, 
+        "monedas": 500, 
+        "pociones": 0 
+    };
+    this.stat = { 
+        "fuerza": armas[this.equip["arma"]] + (nivel * 5), 
+        "hp": 100 + (nivel * 10) + (armaduras[this.equip["armadura"]] * 2), 
+        "experiencia": 0 
+    };
     this.curar = function () {
         this.stat["hp"] = 100 + (this.nivel * 10);
     }
@@ -31,28 +45,33 @@ function personaje(nombre, clase, arma, armadura, nivel) {
         
         `
         while (true) {
-            let dañoEne = (enemy.stat["fuerza"] + getRandomInt(enemy.stat["fuerza"] / 3));
-            let dañoPers = (this.stat["fuerza"] + getRandomInt(this.stat["fuerza"] / 3));
+            let dañoEne = enemy.stat["fuerza"] + (eval(conf["daño"]));
+            let dañoPers = this.stat["fuerza"] + (eval(conf["daño"]));
 
             enemy.stat["hp"] -= dañoPers;
 
             document.getElementById("opt").innerHTML +=
                 `
-                ${this.nombre} ataca e inflinge ${dañoPers} puntos de daño a ${enemy.nombre}[HP:${enemy.stat["hp"]}].<br><br>
+                ${this.nombre} ataca e inflinge 
+                ${dañoPers} puntos de daño a 
+                ${enemy.nombre}
+                [HP:${enemy.stat["hp"]}].<br><br>
                 `
             if (enemy.stat["hp"] <= 0) {
                 document.getElementById("opt").innerHTML += `${this.nombre} ha ganado el combate<br><br>`
-                this.stat.experiencia += (50 + enemy.stat["fuerza"])
-                this.equip["monedas"] += (enemy.stat["fuerza"] / 5)
+                this.stat["experiencia"] += (eval(conf["exp"]))
+                this.equip["monedas"] += (eval(conf["monedas"]))
                 document.getElementById("opt").innerHTML +=
                     `
-                    ${this.nombre} ha ganado ${(50 + enemy.stat["fuerza"])} puntos de experiencia<br><br>
-                    ${this.nombre} ha ganado ${(enemy.stat["fuerza"] / 2)} monedas<br><br>
+                    ${this.nombre} ha ganado 
+                    ${(eval(conf["exp"]))} puntos de experiencia<br><br>
+                    ${this.nombre} ha ganado 
+                    ${(eval(conf["monedas"]))} monedas<br><br>
 
                     `
-                if (this.stat.experiencia >= 200) {
+                if (this.stat["experiencia"] >= 200) {
                     this.nivel += 1
-                    this.stat.experiencia = 0;
+                    this.stat["experiencia"] = 0;
                     document.getElementById("opt").innerHTML +=
                         `
                         ${this.nombre} ha subido a nivel ${this.nivel}<br><br>
@@ -64,12 +83,35 @@ function personaje(nombre, clase, arma, armadura, nivel) {
             
             document.getElementById("opt").innerHTML +=
                 `
-                ${enemy.nombre} ataca e inflinge ${dañoEne} puntos de daño a ${this.nombre}[HP:${this.stat["hp"]}]<br><br>
+                ${enemy.nombre} ataca e inflinge 
+                ${dañoEne} puntos de daño a 
+                ${this.nombre}
+                [HP:${this.stat["hp"]}]<br><br>
                 `
             if (this.stat["hp"] <= 0){
                 document.getElementById("opt").innerHTML += `${enemy.nombre} ha ganado el combate <br><br>`
                 break
             }
+        }
+    }
+    this.compraArma = function(obj){
+        if (armas[obj] * 10 <= this.equip["monedas"]){
+            this.equip["arma"] = obj
+            this.equip["monedas"] -= armas[obj] * 10
+            document.getElementById("tienda").innerHTML += `<br>Has comprado ${obj}`
+
+        }else{
+            document.getElementById("tienda").innerHTML += `<br>No tienes suficiente dinero`
+
+        }
+    }
+    this.compraArmadura = function(obj){
+        if (armaduras[obj] * 10 <= this.equip["monedas"]){
+            this.equip["armadura"] = obj
+            this.equip["monedas"] -= armaduras[obj] * 10
+            document.getElementById("tienda").innerHTML += `<br>Has comprado ${obj}`
+        }else{
+            document.getElementById("tienda").innerHTML += `<br>No tienes suficiente dinero`
         }
     }
 }
@@ -85,6 +127,7 @@ function mostrarMain(mainId) {
         inicio.setAttribute('hidden', true);
     }
 };
+
 
 protagonista = new personaje(
     nombre,
@@ -122,13 +165,28 @@ function menu(opt) {
     }
     else if (opt == "posada") {
         protagonista.curar();
-        protagonista.equip["monedas"] -= 5;
-        document.getElementById("opt").innerHTML = "Pagas 20 monedas y recuperas fuerzas"
+        protagonista.equip["monedas"] -= conf["posada"];
+        document.getElementById("opt").innerHTML = `Pagas ${conf["posada"]} monedas y recuperas fuerzas`
     }
     else if (opt == "tienda") {
-        document.getElementById("opt").innerHTML = `Tienes ${protagonista.equip["monedas"]} monedas.<br>` 
-
+            document.getElementById("opt").innerHTML = 
+            `
+            Tienes ${protagonista.equip["monedas"]} monedas.<br>
+            `
+            document.getElementById('tienda').removeAttribute('hidden');
     }
+    else if (opt == "informacion") {    
+        document.getElementById('informacion').removeAttribute('hidden');
+        document.getElementById("nom").innerHTML = `Nombre: ${protagonista.nombre}`;
+        document.getElementById("clase").innerHTML = `Clase: ${protagonista.clase}`
+        document.getElementById("nivel").innerHTML = `Nivel: ${protagonista.nivel}`
+        document.getElementById("arma").innerHTML = `Arma: ${protagonista.equip["arma"]}`
+        document.getElementById("armadura").innerHTML = ` Armadura: ${protagonista.equip["armadura"]}`
+        document.getElementById("monedas").innerHTML = `Monedas: ${protagonista.equip["monedas"]}`
+        document.getElementById("pociones").innerHTML = `Pociones: ${protagonista.equip["pociones"]}`
+
+
+}
     
 
 }
