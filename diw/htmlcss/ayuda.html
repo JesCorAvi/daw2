@@ -27,43 +27,63 @@
                     <button onclick="window.location.href='nosotros.html'">Sobre nosotros</button>
                 </li>
                 <li>
-                    <button class="selected"  onclick="window.location.href='ayuda.html'">Ayuda</button>
+                    <button class="selected" onclick="window.location.href='ayuda.html'">Ayuda</button>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <br><br><br><br><br>
+        <div id="bannerAyuda">
+            <div id='cajaBanner'>
+                <h1>Ayuda</h1>
+            </div>
+        </div>
+        <br><br>
         <div class="problemas">
-            <p>Problemas con la conectividad o el inicio de sesión.</p>
+            <h3>Problemas con la conectividad o el inicio de sesión.</h3>
         </div>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+            </div>
         <div class="problemas">
-            <p>Problemas con la conectividad o el inicio de sesión.</p>
+            <h3>Problemas con el visionado de la web.</h3>
         </div>
-        <div class="problemas">
-            <p>Problemas con la conectividad o el inicio de sesión.</p>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+            </div>        <div class="problemas">
+            <h3>Problemas con el estado del vehículo o vehículos faltantes.</h3>
         </div>
-        <div class="problemas">
-            <p>Problemas con la conectividad o el inicio de sesión.</p>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+            </div>        <div class="problemas">
+            <h3>Problemas con el pago o con las devoluciones.</h3>
         </div>
-    <form action="get">
-    <fieldset>
-        <legend>Formulario de contacto</legend>
-        <div id="formulario">
-        <div class="tooltip-container">Correo*
-            <span class="tooltip-text">Campo obligatorio</span>
-        </div>
-        <input type="text" size="70">
-        <p>Nombre y Apellidos</p>
-        <input type="text" size="70">
-        <div class="tooltip-container">Describa su problema*
-            <span class="tooltip-text">Campo obligatorio</span>
-        </div>
-        <textarea  rows="17" cols="62"> type="textarea"></textarea>
-        <button>Enviar</button> 
-        </div>
-    </fieldset>
-    </form>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+            </div>
+
+        <form action="get">
+            <fieldset>
+                <legend>Formulario de contacto</legend>
+                <div id="formulario">
+                    <div class="tooltip-container">Correo*
+                        <span class="tooltip-text">Campo obligatorio</span>
+                    </div>
+                    <input type="email" size="70" required>
+                    <p>Nombre y Apellidos</p>
+                    <input type="text" size="70"">
+                    <div class="tooltip-container">Describa su problema*
+                        <span class="tooltip-text">Campo obligatorio</span>
+                    </div>
+                    <textarea rows="17" cols="72" required></textarea>
+                    <button>Enviar</button>
+                </div>
+            </fieldset>
+        </form>
 
 
     </main>
