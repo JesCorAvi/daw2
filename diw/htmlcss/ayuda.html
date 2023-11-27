@@ -45,26 +45,28 @@
         <div class="tooltip-container">
             <span class="tooltip-text">Mostrar mas</span>
             <img class="mas" src="img/mas.png" alt="">
-            </div>
+        </div>
         <div class="problemas">
             <h3>Problemas con el visionado de la web.</h3>
         </div>
         <div class="tooltip-container">
             <span class="tooltip-text">Mostrar mas</span>
             <img class="mas" src="img/mas.png" alt="">
-            </div>        <div class="problemas">
+        </div>
+        <div class="problemas">
             <h3>Problemas con el estado del vehículo o vehículos faltantes.</h3>
         </div>
         <div class="tooltip-container">
             <span class="tooltip-text">Mostrar mas</span>
             <img class="mas" src="img/mas.png" alt="">
-            </div>        <div class="problemas">
+        </div>
+        <div class="problemas">
             <h3>Problemas con el pago o con las devoluciones.</h3>
         </div>
         <div class="tooltip-container">
             <span class="tooltip-text">Mostrar mas</span>
             <img class="mas" src="img/mas.png" alt="">
-            </div>
+        </div>
 
         <form action="get">
             <fieldset>
@@ -73,14 +75,19 @@
                     <div class="tooltip-container">Correo*
                         <span class="tooltip-text">Campo obligatorio</span>
                     </div>
-                    <input type="email" size="70" required>
-                    <p>Nombre y Apellidos</p>
-                    <input type="text" size="70"">
+                    <input type="email" required>
+                    <label>Nombre y Apellidos</label>
+                    <input type="text">
                     <div class="tooltip-container">Describa su problema*
                         <span class="tooltip-text">Campo obligatorio</span>
                     </div>
-                    <textarea rows="17" cols="72" required></textarea>
-                    <button>Enviar</button>
+                    <textarea required></textarea>
+                    <div id="form_check">
+                        <button>Enviar</button>
+                        <input type="checkbox" name="confirm" id="confirm" required>
+                        <label>Acepto compatir mi correo electrónico con Recreate</label>
+                    </div>
+
                 </div>
             </fieldset>
         </form>

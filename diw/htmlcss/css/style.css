@@ -217,14 +217,14 @@ input {
 }
 
 .imagenDerecha {
-    width: 30%;
-    height: 30%;
+    width: 400px;
+    height: 200px;
     float: right;
 }
 
 .imagenIzquierda {
-    width: 30%;
-    height: 30%;
+    width: 400px;
+    height: 200px;
 }
 
 .seccion p {
@@ -334,4 +334,31 @@ input {
 #formulario input[type="email"],
 #formulario textarea{
     color: black;
+}
+#formulario input{
+    width: 600px;
+}
+#formulario textarea{
+    width: 600px;
+    height: 300px;
+}
+#form_check{
+    height: 50px;
+    display: flex;
+    align-content: flex-start;
+} 
+#form_check input[type="checkbox"]{
+    margin-top: 15px;
+    width: 20%;
+    height: 20px;
+}
+#formulario button{
+    width: 20%;
+    height: 35px;
+    margin-right: 20px;
+}
+#formulario label{
+    margin-top: 15px;
+
+    width: 100%;
 }
