@@ -1,3 +1,5 @@
+//no funciona
+
 const nombre = document.getElementById('nombre').value;
 const clase = document.querySelector('select[name="clase"]').value;
 
