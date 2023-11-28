@@ -12,26 +12,26 @@
     <main id="inicio">
         <h1>AVENTURA NOMBRE EJEMPLO</h1>
         <p>
-            Has sido llamado a filas para defender tu tierra, deberás enfrentarte a varios enemigos,
-            hacerte mas fuerte y derrotar al rey corrupto que asola
-            estas tierras.
+            Has sido llamado a filas para defender tu tierra, un infame bandido coordina una banda de maleantes 
+            que asola nuestras tierras y debe ser derrotado.
         </p>
         <p>
             Pero lo primero es lo primero, ¿como te llamas?
         </p>
-        <input type="text" id="nombre" name="nombre" placeholder="Introduze tu nombre">
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
         <p>
-            Buen nombre, aunque necesitarás mas que eso para hacerte fuerte. ¿Que quieres  ser?
+            Buen nombre, aunque necesitarás mas que eso para hacerte fuerte. ¿Que te gustaria ser?
         </p>
         <select name="clase">
-            <option value="Mago" id="mago">Quiero ser un gran Mago</option>
-            <option value="Guerrero" id="guerrero">Quiero ser un Guerrero imbatible</option>
+            <option value="Mago" id="Mago">Quiero ser un gran Mago</option>
+            <option value="Guerrero" id="Guerrero">Quiero ser un Guerrero imbatible</option>
             <option value="spd" id="spd">/No implementado/</option>
         </select>
         <p>
-            Entiendo, puedes ser util ahi fuera. Toma este equipamiento y gánate un nombre luchando.
+            Entiendo, puedes ser util ahi fuera. Toma este equipamiento y gánate un nombre luchando. Sea como sea,
+            derrota a tu objetivo
         </p>
-        <button onclick="mostrarMain('principal')">Comenzar aventura</button>
+        <button onclick="comenzar()">Comenzar aventura</button>
     </main>
     <main id="principal" hidden>
         <div class="barra">
@@ -44,18 +44,23 @@
             <button onclick="menu('informacion')">Información</button><br>
         </div>
         <div id="bosque" hidden>
+            Encuentras varios objetivos, ¿Con quién quieres luchar?<br><br>
+            <button onclick="protagonista.combate(enemigoDebil)">Lobo</button>
+            <button onclick="protagonista.combate(enemigoMedio)">Bandido</button>
+            <button onclick="protagonista.combate(enemigoFuerte)">Jefefe bandido</button> 
+            <br><br><br><br> 
+            <p id="combates"></p>
         </div>
         <div id="posada" hidden>
         </div>
         <div id="tienda" hidden>
             <p id="monedas"></p>
             <p>Que deseas comprar?</p>
-            <p></p><strong>ARMAS</strong></p>
-            Espada de soldado. Precio 500 monedas.
-            <button onclick="protagonista.compraArma('Espada de soldado')">Comprar</button><br>
-            <p></p><strong>ARMADURAS</strong></p>
-            Ropajes reforzados'. Precio 500 monedas.
-            <button onclick="protagonista.compraArmadura('Ropajes reforzados')">Comprar</button>
+            <p><strong>ARMAS</strong></p>
+            <p id="armasP"></p>
+            <p><strong>ARMADURAS</strong></p>
+            <p id="armadurasP"></p>
+            <p id="resultado"></p>
 
         </div>
         <div id="informacion" hidden>
@@ -71,5 +76,5 @@
     </main>
     <script src="scripts.js"></script>
 </body>
-
 </html>
+

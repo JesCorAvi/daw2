@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar un documento</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="../IMG/Logo_blau_uoc.png" alt="Logo de web" width="130" height="50">
+            <ul>
+                <li>
+                    <a href="../index.html" >Inicio</a>
+                </li>
+                <li>
+                    <a href="http://openaccess.uoc.edu/webapps/o2/?locale=es)">Buscar</a>
+                </li>
+                <li>
+                    <a  href="PAGINAS/publicar.html" class="selected">Publicar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br> <br><br><br><br>
+    <main>
+        <article id="formulario">
+            <h1>O2: depositar un documento</h1>
+            <form>
+                <label for="nombre">Nombre de autor*</label>
+                <input type="text" required><br>
+                <label for="nombre">Primer apellido del autor*</label>
+                <input type="text" required><br>
+                <label for="nombre">Segundo apellido del autor*</label>
+                <input type="text" required><br>
+                <label for="nombre">Título del documento *</label>
+                <input type="text" required><br>
+                <label for="nombre">Fecha de creación del documento *</label>
+                <input type="text" required><br>
+                <label>Editorial</label>
+                <fieldset name="radio2">
+                    <input type="radio" disabled required>
+                    <label for="editorial">Universitat Oberta de Catalunya</label><br>
+                </fieldset>
+                <label for="editorial">Tipo de documento *</label>
+                <fieldset name="radio2">
+                    <input type="radio" name="radio2">
+                    <label for="editorial">Artículo</label><br>
+                    <input type="radio" name="radio2">
+                    <label for="editorial" name="radio2">Trabajo fin de carrera</label><br>
+                    <input type="radio" name="radio2" >
+                    <label for="editorial">Trabajo fin de máster</label><br>
+                    <input type="radio" name="radio2">
+                    <label for="editorial">Tesis doctoral</label><br>
+                </fieldset>
+                <label for="editorial">Idioma del documento*</label>
+                <fieldset name="radio2">
+                    <input type="radio" name="radio2">
+                    <label for="editorial">Castellano</label><br>
+                    <input type="radio" name="radio2">
+                    <label for="editorial" name="radio2">Catalán</label><br>
+                    <input type="radio" name="radio2" >
+                    <label for="editorial">Inglés</label><br>
+                    <input type="radio" name="radio2">
+                    <label for="editorial">Otro</label><br>
+                </fieldset><br>
+                <label for="">Breve resumen del documento *</label><br>
+                <textarea required name="" id="" cols="70" rows="20"></textarea><br>
+                <button type="submit">Enviar documento *</button>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p>Actividad realizada por Jesús Cordero Ávila, para la signatura HTML y CSS</p>
+        <p>Primer semestre del curso 2018-2019</p>
+    </footer>
+</body>
+
+</html>
