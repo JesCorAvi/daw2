@@ -252,7 +252,6 @@ table, td, th{
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-
 }
 th {
     background-color: #363062;
@@ -260,9 +259,13 @@ th {
 td{
     background-color: #F99417;
 }
+td p{
+    color: black;
+}
 table p{
     padding-left: 15px;
     padding-right: 15px;
+    
 }
 
 #cajaBanner {
@@ -443,4 +446,44 @@ table p{
 #formulario label{
     margin-top: 15px;
     width: 100%;
+}
+
+#nota{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.segmento{
+    margin: auto;
+    background-color: white;
+    width: 70%;
+    height: 150px;
+    margin-top: 40px;
+}
+
+.segmento button{
+    display: inline;
+    position: absolute;
+    color: black;
+   left: 1150px;
+}
+.segmento-titulo{
+    display: inline;
+    position: absolute;
+    color: black;
+   left: 230px;
+}
+
+.segmento img{
+    height: 120px;
+    width: 120px;
+}
+.desc{
+    color: black;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+
 }
