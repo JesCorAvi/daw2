@@ -101,6 +101,10 @@ article {
     margin-right: 20%;
 }
 
+article p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 article h2 {
     text-align: center;
     padding-bottom: 10px;
@@ -263,6 +267,10 @@ fieldset input {
     background-color: #c57412;
 }
 
+#busqueda  button:active {
+    background-color: #ecb775;
+}
+
 table, td, th{
     margin-top: 15px;
     border: 3px solid #363062;
@@ -278,7 +286,11 @@ td{
     background-color: #F99417;
 }
 td a{
-    color: black;
+    color: #363062;
+    text-decoration: none;
+}
+td p{
+    color: #363062;
     text-decoration: none;
 }
 table p{
@@ -469,6 +481,11 @@ table p{
 
 }
 
+#formulario button:active{
+    background-color: #ecb775;
+
+}
+
 #formulario label{
     margin-top: 15px;
     width: 100%;
@@ -629,6 +646,7 @@ table p{
 }
 .empty{
     list-style: none;
+    color: #363062;
 }
 
 #actual{
@@ -671,4 +689,112 @@ table p{
 }
 .plan button:hover{
     background-color: #c57412;
+}
+
+#producto{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#producto h1{
+    color: #363062;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+
+}
+#puntaje{
+    margin-left: 50px;
+}
+
+#productoDesc{
+    background-color: white;
+    width: 100%;
+
+}
+#puntaje p{
+    display: inline;
+    font-weight: 600;
+    font-size: 36px;
+    color: #363062;
+}
+
+#producto table, 
+#producto td, 
+#producto th{
+    margin-top: 15px;
+    border: 3px solid #363062;
+    border-collapse: collapse;
+    height: 40px;
+}
+#producto img{
+    transition: transform 0.3s ease-in-out;
+
+}
+#producto img:hover{
+    transform: scale(1.5);
+}
+
+#Pdescripcion{
+    margin-top: 30px;
+    color: #363062;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 100px;
+    text-align: justify;
+}
+#precio{
+    margin-top: 60px;
+    margin-left: 50px;
+    font-size: 48px;
+    color: #F99417;
+}
+#compraBotones{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+#compraBotones button{
+    background-color: #F99417;
+    width: 150px;
+    height: 60px;
+    color: #363062;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 55px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+#compraBotones  button:hover {
+    background-color: #c57412;
+}
+
+#compraBotones  button:active {
+    background-color: #ecb775;
+}
+
+#atras{
+    position: absolute;
+    background-color: #F99417;
+    border: #363062 solid 2px;
+    left: 100px;
+    top: 380px;
+    width: 50px;
+    height: 50px;
+    border-radius: 360px;
+    display: grid; 
+    place-items: center; 
+    transition: transform 0.3s ease-in-out;
+}
+
+#atras:hover{
+    transform: scale(1.5);
+}
+
+#atras img{
+    width: 30px;
+    height: 30px;
 }

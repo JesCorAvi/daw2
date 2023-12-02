@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recreate</title>
+    <meta name="description" content="Recreate. Tu cuenta, el especio personal donde consta toda la información de sus vehículos. Desde aquí podrá cambiar su plan de cuenta o montar nuevos componentes.">
+    <title>Tu cuenta. Tu espacio personal donde ver el estado de su vehículo y demás.</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
@@ -15,19 +16,19 @@
             <a href="index.html"><img src="img/logo.png" alt="Logo de web" width="130" height="50"></a>
             <ul>
                 <li>
-                    <a href="index.html"><button >Inicio</button></a>
+                    <button onclick="window.location.href='index.html'">Inicio</button>
                 </li>
                 <li>
-                    <a href="tienda.html"><button>Tienda</button></a>
+                    <button onclick="window.location.href='tienda.html'">Tienda</button>
                 </li>
                 <li>
-                    <a href="cuenta.html"><button class="selected">Mi cuenta</button></a>
+                    <button class="selected" onclick="window.location.href='cuenta.html'">Mi cuenta</button>
                 </li>
                 <li>
-                    <a href="nosotros.html"><button>Sobre nosotros</button></a>
+                    <button onclick="window.location.href='nosotros.html'">Sobre nosotros</button>
                 </li>
                 <li>
-                    <a href="ayuda.html"><button>Ayuda</button></a>
+                    <button  onclick="window.location.href='ayuda.html'">Ayuda</button>
                 </li>
             </ul>
         </nav>
@@ -67,8 +68,8 @@
                 <li>Límite vehiculos: 1</li>
                 <li>Simulador de desgaste limitado.</li>
                 <li>Revisiones anuales gratuitas: 1</li>
-                <li class="empty">&nbsp</li>
-                <li class="empty">&nbsp</li>
+                <li class="empty">-</li>
+                <li class="empty">-</li>
             </ul>
             <p class="precio">9,95€</p>
             <p class="precioTiempo">Al mes</p>
@@ -81,11 +82,11 @@
                 <li>Simulador de desgaste.</li>
                 <li>Revisiones anuales gratuitas: 5</li>
                 <li>Ofertas exclusivas</li>
-                <li class="empty">&nbsp</li>
-                <p class="precio">19,95€</p>
-                <p class="precioTiempo">Al mes</p>
-                <p id="actual">Plan actual</p>
+                <li class="empty">-</li>
             </ul>
+            <p class="precio">19,95€</p>
+            <p class="precioTiempo">Al mes</p>
+            <p id="actual">Plan actual</p>
         </div>
         <div class="plan">
             <h3>Plan profesional</h3>
