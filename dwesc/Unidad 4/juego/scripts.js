@@ -57,15 +57,17 @@ function personaje(nombre, clase, arma, armadura, nivel) {
     // Esta propiedad recoge las stats del objeto.
     this.stat = {
         "fuerza": armas[this.equip["arma"]] + (nivel * 5),
-        "hp": 100 + (nivel * 10) + (armaduras[this.equip["armadura"]] * 2),
-        "experiencia": 0
+        "hp": [100 + (nivel * 10) + (armaduras[this.equip["armadura"]] * 2), 100 + (nivel * 10) + (armaduras[this.equip["armadura"]] * 2)],
+        "experiencia": 0,
+        "magia":[100,100]
     };
     // Este método regenera la stat HP al objeto.
     this.curar = function () {
-        this.stat["hp"] = 100 + (this.nivel * 10);
+        this.stat["hp"][0] = this.stat["hp"][1];
     }
     // Este método calcula los combates. los argumentos que acepta son otros objetos personaje.
-    this.combate = function (enemy) {
+
+    this.combateAntiguo = function (enemy) {
         enemy.curar();
         document.getElementById("combates").innerHTML =
             `
@@ -123,7 +125,7 @@ function personaje(nombre, clase, arma, armadura, nivel) {
                 }
                 break
             }
-            this.stat["hp"] -= dañoEne;
+            this.stat["hp"][0] -= dañoEne;
 
             document.getElementById("combates").innerHTML +=
                 `
@@ -137,6 +139,72 @@ function personaje(nombre, clase, arma, armadura, nivel) {
                 break
             }
         }
+    }
+    this.pintarinfo = function(enemy){
+
+        document.getElementById("infoPr").removeAttribute('hidden');
+        document.getElementById("log").removeAttribute('hidden');
+        document.getElementById("infoEn").removeAttribute('hidden');
+        document.getElementById("infoPr").innerHTML = 
+        `
+        <h1>Protagonista</h1>
+        <strong>Nombre: ${this.nombre}</strong><br>
+        Vida: ${this.stat["hp"][0]} / ${this.stat["hp"][1]}<br>
+        Nivel: ${this.nivel}
+        Magia: ${this.stat["magia"][0]}/${this.stat["magia"][1]}
+        `;
+        document.getElementById("infoEn").innerHTML = 
+        `
+        <h1>Enemigo</h1>
+        <strong>Nombre: ${enemy.nombre}</strong> <br>
+        Vida: ${enemy.stat["hp"][0]} / ${enemy.stat["hp"][1]}<br>
+        Nivel: ${enemy.nivel}
+        `;
+    }
+    this.combate = function() {
+        let enemy = eval(document.querySelector('select[name="enemigo"]').value)
+        let atk = document.querySelector('select[name="ataqueTipo"]').value
+
+        if (atk == "atkF"){
+        let dañoEne = enemy.stat["fuerza"] + (eval(conf["daño"]));
+        let dañoPers = this.stat["fuerza"] + (eval(conf["daño"]));
+        enemy.stat["hp"][0] -= dañoPers;
+        document.getElementById("log").innerHTML =
+            `
+            ${this.nombre} ataca e inflinge 
+            ${dañoPers} puntos de daño a 
+            ${enemy.nombre}
+            [HP:${enemy.stat["hp"][0]}].<br><br>
+            `
+        this.stat["hp"][0] -= dañoEne;
+        document.getElementById("log").innerHTML +=
+            `
+            ${enemy.nombre} ataca e inflinge 
+            ${dañoEne} puntos de daño a 
+            ${this.nombre}
+            [HP:${this.stat["hp"][0]}]<br><br>
+            `
+        }else{
+            let dañoEne = enemy.stat["fuerza"] + (eval(conf["daño"]));
+            let dañoPers = (this.stat["fuerza"] * 3) + (eval(conf["daño"]));
+            enemy.stat["hp"][0] -= dañoPers;
+            document.getElementById("log").innerHTML =
+                `
+                ${this.nombre} ataca con su magia e inflinge 
+                ${dañoPers} puntos de daño a 
+                ${enemy.nombre}
+                [HP:${enemy.stat["hp"][0]}].<br><br>
+                `
+            this.stat["hp"][0] -= dañoEne;
+            document.getElementById("log").innerHTML +=
+                `
+                ${enemy.nombre} ataca e inflinge 
+                ${dañoEne} puntos de daño a 
+                ${this.nombre}
+                [HP:${this.stat["hp"][0]}]<br><br>
+                `
+        }
+        this.pintarinfo(enemy)
     }
     // Con este método los objetos presonaje pueden comprar armas.
     this.compraArma = function (obj) {
@@ -161,7 +229,6 @@ function personaje(nombre, clase, arma, armadura, nivel) {
         }
     }
 }
-
 // Esta función oculta el main inicio, muestra el main principal 
 // y crea el objeto que usaremos como personaje principal.
 function comenzar(){
@@ -196,7 +263,7 @@ enemigoFuerte = new personaje(
     "Jefe bandido",
     "guerrero",
     "Espada legendaria",
-    "Espada legendaria",
+    "Armadura legendaria",
     10
 );
 
@@ -204,7 +271,9 @@ enemigoFuerte = new personaje(
 
 function menu(opt) {
     if (opt == "bosque") {
-        document.getElementById("combates").innerHTML =""
+        document.getElementById("infoPr").innerHTML =""
+        document.getElementById("infoEn").innerHTML =""
+        document.getElementById("log").innerHTML =""
         limpiar(opt)
     }
     else if (opt == "posada") {
