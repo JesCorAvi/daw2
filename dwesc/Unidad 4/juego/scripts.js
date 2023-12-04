@@ -65,7 +65,7 @@ function personaje(nombre, clase, arma, armadura, nivel) {
     this.curar = function () {
         this.stat["hp"][0] = this.stat["hp"][1];
     }
-    // Este método calcula los combates. los argumentos que acepta son otros objetos personaje.
+    // Este método calcula los combates. los argumentos que acepta son otros objetos personaje. OBSOLETO.
 
     this.combateAntiguo = function (enemy) {
         enemy.curar();
@@ -161,6 +161,7 @@ function personaje(nombre, clase, arma, armadura, nivel) {
         Nivel: ${enemy.nivel}
         `;
     }
+    // Este método calcula los combates. los argumentos que acepta son otros objetos personaje. NUEVO MÉTODO.
     this.combate = function() {
         let enemy = eval(document.querySelector('select[name="enemigo"]').value)
         let atk = document.querySelector('select[name="ataqueTipo"]').value
