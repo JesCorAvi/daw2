@@ -68,7 +68,7 @@ function personaje(nombre, clase, arma, armadura, nivel) {
 
     this.combateDerrota = function(enemy) {
         document.getElementById("log").innerHTML += 
-        `<strong>${enemy.nombre} ha ganado el combate</strong> <br><br>`
+        `<br><strong>${enemy.nombre} ha ganado el combate</strong> <br><br>`
         enemy.curar();
     }
     this.combateVictoria = function(enemy){
@@ -117,16 +117,30 @@ function personaje(nombre, clase, arma, armadura, nivel) {
         <h1>Protagonista</h1>
         <strong>Nombre: ${this.nombre}</strong><br>
         Vida: ${this.stat["hp"][0]} / ${this.stat["hp"][1]}<br>
-        Nivel: ${this.nivel}
-        Magia: ${this.stat["magia"][0]}/${this.stat["magia"][1]}
+        Nivel: ${this.nivel}<br>
+        Magia: ${this.stat["magia"][0]}/${this.stat["magia"][1]}<br>
         `;
+        var img = document.createElement("img");
+        img.src = "img/heroe.png";
+
+        var src = document.getElementById("infoPr");
+        src.appendChild(img);
         document.getElementById("infoEn").innerHTML = 
         `
         <h1>Enemigo</h1>
         <strong>Nombre: ${enemy.nombre}</strong> <br>
         Vida: ${enemy.stat["hp"][0]} / ${enemy.stat["hp"][1]}<br>
-        Nivel: ${enemy.nivel}
+        Nivel: ${enemy.nivel}<br>
         `;
+        var img = document.createElement("img");
+        if (enemy.nombre == "Lobo"){
+            img.src = "img/lobo.png";
+        }else{
+            img.src = "img/enemigo.png";
+
+        }
+        var src = document.getElementById("infoEn");
+        src.appendChild(img);
     }
     // Este método calcula los combates. los argumentos que acepta son otros objetos personaje. NUEVO MÉTODO.
 
