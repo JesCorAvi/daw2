@@ -1,5 +1,3 @@
-const nombre = document.getElementById('nombre').value;
-const clase = document.querySelector('select[name="clase"]').value;
 const opMenu = ["bosque", "posada", "tienda", "informacion"]
 // Esta función oculta los elementos que no sen necesarios tomandolos de opMenu.
 function limpiar(opt) {
@@ -64,80 +62,49 @@ function personaje(nombre, clase, arma, armadura, nivel) {
     // Este método regenera la stat HP al objeto.
     this.curar = function () {
         this.stat["hp"][0] = this.stat["hp"][1];
+        this.stat["magia"][0] = this.stat["magia"][1];
+
     }
-    // Este método calcula los combates. los argumentos que acepta son otros objetos personaje. OBSOLETO.
 
-    this.combateAntiguo = function (enemy) {
+    this.combateDerrota = function(enemy) {
+        document.getElementById("log").innerHTML += 
+        `<strong>${enemy.nombre} ha ganado el combate</strong> <br><br>`
         enemy.curar();
-        document.getElementById("combates").innerHTML =
-            `
-        Te encuentras frente a ${enemy.nombre}. ¿Que deseas hacer?<br><br>
-        
+    }
+    this.combateVictoria = function(enemy){
+        var img = document.createElement("img");
+        img.src = "img/victoria.png";
+        var src = document.getElementById("log");
+        src.appendChild(img);
+        document.getElementById("log").innerHTML +=
         `
-        while (true) {
-            let dañoEne = enemy.stat["fuerza"] + (eval(conf["daño"]));
-            let dañoPers = this.stat["fuerza"] + (eval(conf["daño"]));
+        <br><strong>${this.nombre} ha ganado el combate</strong><br><br>
+        `
+        this.stat["experiencia"] += (eval(conf["exp"]))
+        this.equip["monedas"] += (eval(conf["monedas"]))
+        document.getElementById("log").innerHTML +=
+            `
+            <strong>${this.nombre} ha ganado 
+            ${(eval(conf["exp"]))} puntos de experiencia<br><br>
+            ${this.nombre} ha ganado 
+            ${(eval(conf["monedas"]))} monedas<br><br></strong>
 
-            enemy.stat["hp"] -= dañoPers;
-
-            document.getElementById("combates").innerHTML +=
-                `
-                ${this.nombre} ataca e inflinge 
-                ${dañoPers} puntos de daño a 
-                ${enemy.nombre}
-                [HP:${enemy.stat["hp"]}].<br><br>
-                `
-            if (enemy.stat["hp"] <= 0) {
-                var img = document.createElement("img");
-                img.src = "img/victoria.png";
-
-                var src = document.getElementById("combates");
-                src.appendChild(img);
-                document.getElementById("combates").innerHTML +=
-                    `
-                <br><strong>${this.nombre} ha ganado el combate</strong><br><br>
-                `
-                this.stat["experiencia"] += (eval(conf["exp"]))
-                this.equip["monedas"] += (eval(conf["monedas"]))
-                document.getElementById("combates").innerHTML +=
-                    `
-                    <strong>${this.nombre} ha ganado 
-                    ${(eval(conf["exp"]))} puntos de experiencia<br><br>
-                    ${this.nombre} ha ganado 
-                    ${(eval(conf["monedas"]))} monedas<br><br></strong>
-
-                    `
-                if (this.stat["experiencia"] >= 200) {
-                    this.nivel += 1
-                    this.stat["experiencia"] = 0;
-                    var img = document.createElement("img");
-                    img.src = "img/lvl.png";
+            `
+        if (this.stat["experiencia"] >= 200) {
+            this.nivel += 1
+            this.stat["experiencia"] = 0;
+            var img = document.createElement("img");
+            img.src = "img/lvl.png";
     
-                    var src = document.getElementById("combates");
-                    src.appendChild(img);
-                    document.getElementById("combates").innerHTML +=
-                        `
-                        <br>${this.nombre} ha subido a nivel ${this.nivel}<br><br>
-                        `
-                }
-                if (enemy.nombre == "Jefe bandido"){
-                    document.write("<h1>Felicidades, has derrotado al infame bandido que asolaba estas tierras y serás recordado como un heroe</h1>")
-                }
-                break
-            }
-            this.stat["hp"][0] -= dañoEne;
-
-            document.getElementById("combates").innerHTML +=
+            var src = document.getElementById("log");
+            src.appendChild(img);
+            document.getElementById("log").innerHTML +=
                 `
-                ${enemy.nombre} ataca e inflinge 
-                ${dañoEne} puntos de daño a 
-                ${this.nombre}
-                [HP:${this.stat["hp"]}]<br><br>
+                <br>${this.nombre} ha subido a nivel ${this.nivel}<br><br>
                 `
-            if (this.stat["hp"] <= 0) {
-                document.getElementById("combates").innerHTML += `<strong>${enemy.nombre} ha ganado el combate</strong> <br><br>`
-                break
-            }
+        }
+        if (enemy.nombre == "Jefe bandido"){
+            document.write("<h1>Felicidades, has derrotado al infame bandido que asolaba estas tierras y serás recordado como un heroe</h1>")
         }
     }
     this.pintarinfo = function(enemy){
@@ -162,48 +129,47 @@ function personaje(nombre, clase, arma, armadura, nivel) {
         `;
     }
     // Este método calcula los combates. los argumentos que acepta son otros objetos personaje. NUEVO MÉTODO.
+
     this.combate = function() {
+        document.getElementById("log").innerHTML = "";
         let enemy = eval(document.querySelector('select[name="enemigo"]').value)
         let atk = document.querySelector('select[name="ataqueTipo"]').value
-
-        if (atk == "atkF"){
         let dañoEne = enemy.stat["fuerza"] + (eval(conf["daño"]));
-        let dañoPers = this.stat["fuerza"] + (eval(conf["daño"]));
+        if (atk == "atkF"){
+            var dañoPers =  this.stat["fuerza"] + (eval(conf["daño"]));
+            var armaUsada = this.equip["arma"]
+        }else if (atk == "atkM"){
+            if (this.stat["magia"][0] > 0){
+            var dañoPers =  (this.stat["fuerza"] * 2) + (eval(conf["daño"]));
+            var armaUsada = "Magia"
+            this.stat["magia"][0] -= 25;
+        }else{
+                var dañoPers =  0;
+                var armaUsada = "Magia"
+            }
+        }
         enemy.stat["hp"][0] -= dañoPers;
         document.getElementById("log").innerHTML =
             `
             ${this.nombre} ataca e inflinge 
             ${dañoPers} puntos de daño a 
-            ${enemy.nombre}
-            [HP:${enemy.stat["hp"][0]}].<br><br>
+            ${enemy.nombre} con su ${armaUsada}<br>
+            
             `
-        this.stat["hp"][0] -= dañoEne;
-        document.getElementById("log").innerHTML +=
-            `
-            ${enemy.nombre} ataca e inflinge 
-            ${dañoEne} puntos de daño a 
-            ${this.nombre}
-            [HP:${this.stat["hp"][0]}]<br><br>
-            `
-        }else{
-            let dañoEne = enemy.stat["fuerza"] + (eval(conf["daño"]));
-            let dañoPers = (this.stat["fuerza"] * 3) + (eval(conf["daño"]));
-            enemy.stat["hp"][0] -= dañoPers;
-            document.getElementById("log").innerHTML =
-                `
-                ${this.nombre} ataca con su magia e inflinge 
-                ${dañoPers} puntos de daño a 
-                ${enemy.nombre}
-                [HP:${enemy.stat["hp"][0]}].<br><br>
-                `
+        if (enemy.stat["hp"][0] <= 0){
+            this.combateVictoria(enemy)
+        }
+        if (enemy.stat["hp"][0] > 0){
             this.stat["hp"][0] -= dañoEne;
             document.getElementById("log").innerHTML +=
                 `
                 ${enemy.nombre} ataca e inflinge 
                 ${dañoEne} puntos de daño a 
                 ${this.nombre}
-                [HP:${this.stat["hp"][0]}]<br><br>
                 `
+            if (this.stat["hp"][0] <= 0){
+                this.combateDerrota(enemy)
+            }
         }
         this.pintarinfo(enemy)
     }
@@ -233,6 +199,8 @@ function personaje(nombre, clase, arma, armadura, nivel) {
 // Esta función oculta el main inicio, muestra el main principal 
 // y crea el objeto que usaremos como personaje principal.
 function comenzar(){
+    let nombre = document.getElementById('nombre').value;
+    let clase = document.querySelector('select[name="clase"]').value;
     protagonista = new personaje(
         nombre,
         clase,
@@ -272,6 +240,9 @@ enemigoFuerte = new personaje(
 
 function menu(opt) {
     if (opt == "bosque") {
+        enemigoDebil.curar();
+        enemigoMedio.curar();
+        enemigoFuerte.curar();
         document.getElementById("infoPr").innerHTML =""
         document.getElementById("infoEn").innerHTML =""
         document.getElementById("log").innerHTML =""
