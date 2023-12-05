@@ -30,11 +30,21 @@ const armaduras = {
 // Vida de los personajes.
 // Costes de los objetos.
 const conf = {
+    //Calculo de fuerza
+    "fuerza":"armas[this.equip['arma']] + (this.nivel * 5)",
+    //Calculo de vida
+    "hp": "100 + (this.nivel * 10) + (armaduras[this.equip['armadura']] * 2)",
+    //Coste posada
     "posada": 5,
+    //monedas recibida
     "monedas": "enemy.stat['fuerza'] / 2",
+    //Experiencia recibida
     "exp": "50 + enemy.stat['fuerza']",
+    //Aleatoreidad de los daños
     "daño": "getRandomInt(enemy.stat['fuerza'] / 3)",
+    //coste de las armas
     "cArma": " armas[obj] * 10",
+    //coste de las armaduras
     "cArmadura": "armaduras[obj] * 10"
 }
 
@@ -50,20 +60,18 @@ function personaje(nombre, clase, arma, armadura, nivel) {
         "arma": arma,
         "armadura": armadura,
         "monedas": 100,
-        "pociones": 0
+        "pociones": 5
     };
     // Esta propiedad recoge las stats del objeto.
     this.stat = {
-        "fuerza": armas[this.equip["arma"]] + (nivel * 5),
-        "hp": [100 + (nivel * 10) + (armaduras[this.equip["armadura"]] * 2), 100 + (nivel * 10) + (armaduras[this.equip["armadura"]] * 2)],
+        "fuerza": eval(conf["fuerza"]),
+        "hp":[eval(conf["hp"]), eval(conf["hp"])],
         "experiencia": 0,
         "magia":[100,100]
     };
     // Este método regenera la stat HP al objeto.
     this.curar = function () {
         this.stat["hp"][0] = this.stat["hp"][1];
-        this.stat["magia"][0] = this.stat["magia"][1];
-
     }
 
     this.combateDerrota = function(enemy) {
@@ -102,13 +110,15 @@ function personaje(nombre, clase, arma, armadura, nivel) {
                 `
                 <br>${this.nombre} ha subido a nivel ${this.nivel}<br><br>
                 `
+            this.stat["fuerza"] = eval(conf["fuerza"]);    
+            this.stat["hp"][1] = eval(conf["hp"]);    
         }
         if (enemy.nombre == "Jefe bandido"){
             document.write("<h1>Felicidades, has derrotado al infame bandido que asolaba estas tierras y serás recordado como un heroe</h1>")
+            document.body.style.backgroundImage = "url('img/fin.jpg')"; 
         }
     }
     this.pintarinfo = function(enemy){
-
         document.getElementById("infoPr").removeAttribute('hidden');
         document.getElementById("log").removeAttribute('hidden');
         document.getElementById("infoEn").removeAttribute('hidden');
@@ -137,7 +147,6 @@ function personaje(nombre, clase, arma, armadura, nivel) {
             img.src = "img/lobo.png";
         }else{
             img.src = "img/enemigo.png";
-
         }
         var src = document.getElementById("infoEn");
         src.appendChild(img);
@@ -145,6 +154,7 @@ function personaje(nombre, clase, arma, armadura, nivel) {
     // Este método calcula los combates. los argumentos que acepta son otros objetos personaje. NUEVO MÉTODO.
 
     this.combate = function() {
+        var boton = true;
         document.getElementById("log").innerHTML = "";
         let enemy = eval(document.querySelector('select[name="enemigo"]').value)
         let atk = document.querySelector('select[name="ataqueTipo"]').value
@@ -168,12 +178,13 @@ function personaje(nombre, clase, arma, armadura, nivel) {
             ${this.nombre} ataca e inflinge 
             ${dañoPers} puntos de daño a 
             ${enemy.nombre} con su ${armaUsada}<br>
-            
             `
         if (enemy.stat["hp"][0] <= 0){
-            this.combateVictoria(enemy)
+            this.combateVictoria(enemy);
+            enemy.curar()
+            boton = false;
         }
-        if (enemy.stat["hp"][0] > 0){
+        if (boton){
             this.stat["hp"][0] -= dañoEne;
             document.getElementById("log").innerHTML +=
                 `
@@ -193,6 +204,8 @@ function personaje(nombre, clase, arma, armadura, nivel) {
             this.equip["arma"] = obj
             this.equip["monedas"] -= eval(conf["cArma"])
             document.getElementById("resultado").innerHTML = `<br>Has comprado ${obj}`
+            this.stat["fuerza"] = eval(conf["fuerza"]);    
+
 
         } else if  (eval(conf["cArma"]) > this.equip["monedas"]){
             document.getElementById("resultado").innerHTML = `<br>No tienes suficiente dinero`
@@ -205,8 +218,26 @@ function personaje(nombre, clase, arma, armadura, nivel) {
             this.equip["armadura"] = obj
             this.equip["monedas"] -= eval(conf["cArmadura"])
             document.getElementById("resultado").innerHTML = `<br>Has comprado ${obj}`
+            this.stat["hp"][1] = eval(conf["hp"]);    
         } else if  (eval(conf["cArmadura"]) > this.equip["monedas"]){
             document.getElementById("resultado").innerHTML = `<br>No tienes suficiente dinero`
+        }
+    }
+    this.compraPocion = function(){
+        if (15 <= this.equip["monedas"]){
+            this.equip["pociones"] += 1;
+            this.equip["monedas"] -= 15;
+            document.getElementById("resultado").innerHTML = `<br>Has comprado una poción`
+        }else{
+            document.getElementById("resultado").innerHTML = `<br>No tienes suficiente dinero`
+        }
+    }
+    this.tomarPocion = function(){
+        if (this.equip["pociones"] > 0){
+            this.equip["pociones"] -=1;
+            this.stat["magia"][0] = this.stat["magia"][1];
+            document.getElementById("nPociones").innerHTML = `Tienes ${protagonista.equip["pociones"]} pociones`; 
+            this.pintarinfo();
         }
     }
 }
@@ -247,7 +278,7 @@ enemigoFuerte = new personaje(
     "guerrero",
     "Espada legendaria",
     "Armadura legendaria",
-    10
+    20
 );
 
 // Esta función maneja las diferentes opciones del menú.
@@ -257,6 +288,7 @@ function menu(opt) {
         enemigoDebil.curar();
         enemigoMedio.curar();
         enemigoFuerte.curar();
+        document.getElementById("nPociones").innerHTML = `Tienes ${protagonista.equip["pociones"]} pociones`; 
         document.getElementById("infoPr").innerHTML =""
         document.getElementById("infoEn").innerHTML =""
         document.getElementById("log").innerHTML =""
@@ -290,6 +322,11 @@ function menu(opt) {
             `
         }
         document.getElementById("armadurasP").innerHTML  = armadurasL
+        document.getElementById("pocionesP").innerHTML  = 
+        `Comprar poción: Precio 15 monedas
+        <button onclick="protagonista.compraPocion()">Comprar</button><br>
+        `
+
     }
     else if (opt == "informacion") {
         limpiar(opt)

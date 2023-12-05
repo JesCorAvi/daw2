@@ -1,8 +1,6 @@
 *{
     text-align: center;
     margin: 0;
-    
-    
 
 }
 .barra{
@@ -10,8 +8,8 @@
     color: black;
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
+
 #bosque{
     background-color: aliceblue;
 }
@@ -31,7 +29,7 @@
     align-items: center;
 }
 #infoPr, #infoEn{
-    background-color: antiquewhite;
+    background-color: rgba(242, 214, 87, 0.5);
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -43,6 +41,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 40px;
 }
 
 #combate button{
