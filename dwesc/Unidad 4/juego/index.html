@@ -12,50 +12,64 @@
     <main id="inicio">
         <h1>DERROTA AL JEFE BANDIDO</h1>
         <p>
-            Has sido llamado a filas para defender tu tierra, un infame bandido coordina una banda de maleantes 
+            Has sido llamado a filas para defender tu tierra,
+            un infame bandido coordina una banda de maleantes
             que asola nuestras tierras y debe ser derrotado.
         </p>
         <p>
             Pero lo primero es lo primero, ¿como te llamas?
         </p>
+        <br>
         <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+        <br><br>
         <p>
             Buen nombre, aunque necesitarás mas que eso para hacerte fuerte. ¿Que te gustaria ser?
         </p>
+        <br>
+        <p>
+            Los guerreros son los mas balanceados y no dependen tanto de la magia.
+        </p>
+        <br>
+        <p>
+            Los magos son muy poderosos pero al confiar mucho en su magia son fisicamente débiles.
+        </p>
+        <br>
         <select name="clase">
             <option value="Guerrero" id="Guerrero">Quiero ser un Guerrero imbatible</option>
-            <option value="Mago" id="Mago">Quiero ser un gran Mago</option>
-            <option value="spd" id="spd">/No implementado/</option>
+            <option value="Mago" id="Mago" selected>Quiero ser un gran Mago</option>
         </select>
+        <br><br>
         <p>
             Entiendo, puedes ser util ahi fuera. Toma este equipamiento y gánate un nombre luchando. Sea como sea,
             derrota a tu objetivo
         </p>
+        <br>
         <button onclick="comenzar()">Comenzar aventura</button>
     </main>
     <main id="principal" hidden>
         <div class="barra">
             <p>
-                <strong>Te adentras  en un pueblo y encuentras varios lugares de interés:</strong>
+                <strong>Te adentras en un pueblo y encuentras varios lugares de interés:</strong>
             </p>
             <button onclick="menu('tienda')">Tienda</button>
             <button onclick="menu('posada')">Posada</button>
             <button onclick="menu('bosque')">Bosque</button>
             <button onclick="menu('informacion')">Información</button><br>
+            <button onclick="menu('tablon')">Tablón de anuncios</button><br>
         </div>
         <div id="bosque" hidden>
             Encuentras varios objetivos, ¿Con quién quieres luchar?<br><br>
             <select name="enemigo" id="enemigo">
-                <option value="enemigoDebil">Lobo</option>
-                <option value="enemigoMedio">Bandido</option>
-                <option value="enemigoFuerte">Jefe bandido</option>
+                <option value="enemigoDebil">DIFICULTAD: FACIL. Lobo</option>
+                <option value="enemigoMedio">DIFICULTAD: MEDIA. Bandido</option>
+                <option value="enemigoFuerte">DIFICULTAD: MUY DIFICIL. Jefe bandido</option>
             </select>
             <select name="ataqueTipo" id="ataqueTipo">
                 <option value="atkF">Ataque Físico</option>
                 <option value="atkM">Ataque Mágico</option>
-            </select><br> <br> 
+            </select><br> <br>
             <label id="nPociones"></label>
-            <button onclick="protagonista.tomarPocion()">Tomar Poción</button><br> <br> 
+            <button onclick="protagonista.tomarPocion()">Tomar Poción</button><br> <br>
             <button onclick="protagonista.combate()">Atacar</button>
             <div id="info">
                 <div id="infoPr"></div>
@@ -79,19 +93,36 @@
             <p><strong>UTILIDAD</strong></p>
             <p id="pocionesP"></p>
             <p id="resultado"></p>
-
+        </div>
+        <div id="tablon" hidden>
+            <h1 class="m1">MISIÓN: Acaba con 7 lobos.</h1>
+            <h2 class="m1">Recompensa: 100 Monedas</h2>
+            <button class="m1" onclick="protagonista.mision('1')">Entregar misión</button>
+            <p id="mision1"></p>
+            <br>
+            <h1 class="m2">MISIÓN: Acaba con 20 lobos.</h1>
+            <h2 class="m2">Recompensa: 300 Monedas</h2>
+            <button class="m2" onclick="protagonista.mision('2')">Entregar misión</button>
+            <p id="mision2"></p>
+            <br>
+            <h1 class="m3">MISIÓN: Acaba con 10 Bandidos.</h1>
+            <h2 class="m3">Recompensa: 500 Monedas</h2>
+            <button class="m3" onclick="protagonista.mision('3')">Entregar misión</button>
+            <p id="mision3"></p>
+            <br>
         </div>
         <div id="informacion" hidden>
-            <p id="nom">.</p>            
-            <p id="clase">.</p>            
-            <p id="nivel">.</p>            
-            <p id="arma">.</p>            
-            <p id="armadura">.</p>            
-            <p id="moneda">.</p>            
-            <p id="pociones">.</p>  
-            <br>     
+            <p id="nom">.</p>
+            <p id="clase">.</p>
+            <p id="nivel">.</p>
+            <p id="arma">.</p>
+            <p id="armadura">.</p>
+            <p id="moneda">.</p>
+            <p id="pociones">.</p>
+            <br>
         </div>
     </main>
     <script src="scripts.js"></script>
 </body>
+
 </html>
