@@ -86,7 +86,6 @@ footer ul {
 
 footer li {
     margin-bottom: 10px;
-
 }
 
 .footer-titulo {
@@ -801,4 +800,12 @@ table p{
 #atras img{
     width: 30px;
     height: 30px;
+}
+
+.footer-rrss{
+    list-style: none;
+}
+.footer-rrss img{
+    width: 20px;
+    height: 20px;
 }
