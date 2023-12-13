@@ -78,7 +78,13 @@ function personaje(nombre, clase, arma, armadura, nivel) {
     };
     //Este método maneja que hacer si se pierde un combate.
     this.combateDerrota = function () {
-        document.write("<style>body{color: white; background-image: url('img/gameOver.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; text-align:center;}</style>");
+        document.write("<style>body{\
+                            color: white; \
+                            background-image: url('img/gameOver.jpg'); \
+                            background-size: cover; \
+                            background-repeat: no-repeat; \
+                            background-position: center; \
+                            text-align:center;}</style>");
         document.write("<h1>Te han derrotado</h1>");
         document.write("<h1>FIN DEL JUEGO</h1>");
     };
@@ -122,8 +128,15 @@ function personaje(nombre, clase, arma, armadura, nivel) {
         };
         //Si esto es true se gana la partida y acaba el juego
         if (enemy.nombre == "Jefe bandido") { 
-            document.write("<style>body{color: white; background-image: url('img/fin.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; text-align:center;}</style>");
-            document.write("<h1>Felicidades, has derrotado al infame bandido que asolaba estas tierras y serás recordado como un heroe</h1>");
+            document.write("<style>body{\
+                                color: white; \
+                                background-image: url('img/fin.jpg');\
+                                background-size: cover; \
+                                background-repeat: no-repeat;\
+                                background-position: center; \
+                                text-align:center;}</style>");
+            document.write("<h1>Felicidades, has derrotado al infame bandido que \
+                            asolaba estas tierras y serás recordado como un heroe</h1>");
         };
     };
     //este método dibuja el html del combate.
