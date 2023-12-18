@@ -1,5 +1,4 @@
 const opMenu = ["bosque", "posada", "tienda", "informacion", "tablon"]
-
 // Esta función oculta los elementos que no sean necesarios tomandolos de opMenu.
 function limpiar(opt) {
     for (var x of opMenu) {
