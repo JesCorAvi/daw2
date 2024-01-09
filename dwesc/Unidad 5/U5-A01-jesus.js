@@ -7,5 +7,5 @@
             document.getElementById("info").innerHTML = "Has usado el click  derecho";
         }
     }
-    )
+)
 

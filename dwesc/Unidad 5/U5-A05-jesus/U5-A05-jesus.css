@@ -1,0 +1,7 @@
+#imagen{
+    width: 700px;
+    height: 500px;
+    background-image: url("ñu1.jpg");
+    position: relative;
+    background-repeat: no-repeat;
+}
