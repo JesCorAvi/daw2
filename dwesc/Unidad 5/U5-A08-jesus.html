@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario1</title>
+    <script src="U5-A08-jesus.js" defer></script>
+</head>
+<body>
+    <form action="mailto:jesus.cordero@iesdonana.org" method="post" enctype="text/plain" >
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Introduce tu nombre</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="mensaje">Mensaje</label><br>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea><br>
+        </fieldset>
+        <label for="color">Elige un color</label><br>
+        <label><input type="radio" name="color" value="rojo">Rojo</label><br>
+        <label><input type="radio" name="color" value="verde">Verde</label><br>
+        <label><input type="radio" name="color" value="azul">Azul</label><br><br>
+        <label>Elige una asignatura</label>
+        <select>
+            <option value="matemativas">Matemáticas</option>
+            <option value="lengua">Lengua</option>
+            <option value="historia">Historia</option>
+        </select name="dia"><br><br>
+        <label for="">Selecciona los dias con disponibilidad</label><br>
+        <input type="checkbox"> <label>Lunes</label><br>
+        <input type="checkbox"> <label>Martes</label><br>
+        <input type="checkbox"> <label>Miércoles</label><br>
+        <input type="checkbox"> <label>Jueves</label><br>
+        <input type="checkbox"> <label>Viernes</label><br>
+        <label for="">Selecciona el dia preferente:</label>
+        <select name="diaP">
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miercoles">Miercoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+        </select><br><br>
+        <button type="submit">Haz click para enviar informacion</button>
+        <button type="reset" name="">Comenzar a rellenar de nuevo</button>
+        <button type="button" id="sobremi">Haz click sobre mi</button>
+    </form>
+</body>
+</html>
