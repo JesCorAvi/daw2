@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Recreate. Apartado de ayuda que te solucionará cualquier problema que tengas con nuestra web. No dude en usar nuestro formulario para ponerse en contacto con profesionales.">
+    <title>Ayuda. Pide ayuda con algún problema surgido en la web Recreate.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png" alt="Logo de web" width="130" height="50"></a>
+            <ul>
+                <li>
+                    <button onclick="window.location.href='index.html'">Inicio</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='tienda.html'">Tienda</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='cuenta.html'">Mi cuenta</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='nosotros.html'">Sobre nosotros</button>
+                </li>
+                <li>
+                    <button class="selected" onclick="window.location.href='ayuda.html'">Ayuda</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="bannerAyuda">
+            <div id='cajaBanner'>
+                <h1>Ayuda</h1>
+            </div>
+        </div>
+        <br><br>
+        <div class="problemas">
+            <h3>Problemas con la conectividad o el inicio de sesión.</h3>
+        </div>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+        </div>
+        <div class="problemas">
+            <h3>Problemas con el visionado de la web.</h3>
+        </div>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+        </div>
+        <div class="problemas">
+            <h3>Problemas con el estado del vehículo o vehículos faltantes.</h3>
+        </div>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+        </div>
+        <div class="problemas">
+            <h3>Problemas con el pago o con las devoluciones.</h3>
+        </div>
+        <div class="tooltip-container">
+            <span class="tooltip-text">Mostrar mas</span>
+            <img class="mas" src="img/mas.png" alt="">
+        </div>
+        <p id="nota">
+            Si necesita ayuda y su problema no aparece arriba, puede hacer uso de nuestro
+            de formulario de contacto a continucación.
+        </p>
+        <form action="get">
+            <fieldset>
+                <legend>Formulario de contacto</legend>
+                <div id="formulario">
+                    <div class="tooltip-container">Correo*
+                        <span class="tooltip-text">Campo obligatorio</span>
+                    </div>
+                    <input type="email" required>
+                    <label>Nombre y Apellidos</label>
+                    <input type="text">
+                    <div class="tooltip-container">Describa su problema*
+                        <span class="tooltip-text">Campo obligatorio</span>
+                    </div>
+                    <textarea required></textarea>
+                    <div id="form_check">
+                        <button>Enviar</button>
+                        <input type="checkbox" name="confirm" id="confirm" required>
+                        <label>Acepto compatir mi correo electrónico con Recreate*</label>
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+
+
+    </main>
+    <footer>
+        <h4>Recreate</h4>
+        <ul>
+            <li class="footer-titulo">Política de privacidad</li>
+            <li><a href="">Política de cookies</a></li>
+            <li><a href="">Tratamiento de datos</a></li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Informacion de contacto</li>
+            <li>Ejemplo@redesing.com</li>
+            <li>644557734</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Establecimientos</li>
+            <li>Consulte todos los locales cercanos <a href="">aqui</a>.</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Redes sociales</li>
+            <li class="footer-rrss"><img src="img/facebook.svg" alt=""><a href="">Facebook</a></li>
+            <li class="footer-rrss"><img src="img/instagram.svg" alt=""><a href="">Instagram</a></li>
+        </ul>
+        <img id="cc" src="img/cc.svg" alt="Licencia Creative Commons">
+    </footer>
+</body>
+
+</html>

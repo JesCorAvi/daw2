@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario3</title>
+    <script src="U5-A10-jesus.js" defer></script>
+</head>
+<body>
+    <form id = "formulario" action="mailto:jesus.cordero@iesdonana.org" method="post" enctype="text/plain" >
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Introduce tu nombre</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="mensaje">Mensaje</label><br>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea><br>
+        </fieldset>
+        <label for="color" name="Color">Elige un color</label><br>
+        <label><input type="radio" name="color" value="rojo">Rojo</label><br>
+        <label><input type="radio" name="color" value="verde">Verde</label><br>
+        <label><input type="radio" name="color" value="azul">Azul</label><br><br>
+        <label>Elige una asignatura</label>
+        <select id="materia" name="Asignatura">
+            <option value="matematicas">Matemáticas</option>
+            <option value="lengua">Lengua</option>
+            <option value="historia">Historia</option>
+        </select><br><br>
+        <label for="dia" name="dias">Selecciona los dias con disponibilidad</label><br>
+        <input id="0" name="checkbox" type="checkbox" value="Lunes"> <label>Lunes</label><br>
+        <input id="1" name="checkbox" type="checkbox" value="Martes"> <label>Martes</label><br>
+        <input id="2" name="checkbox" type="checkbox" value="Miercoles"> <label>Miércoles</label><br>
+        <input id="3" name="checkbox" type="checkbox" value="Jueves"> <label>Jueves</label><br>
+        <input id="4" name="checkbox" type="checkbox" value="Viernes"> <label>Viernes</label><br>
+        <label for="dia_preferente">Selecciona el dia preferente:</label>
+        <label for="diaPreferente"></label>
+        <input id="preferente" type="text" readonly><br>
+        <button type="submit"  id="enviar">Haz click para enviar informacion</button>
+        <button type="reset" name="">Comenzar a rellenar de nuevo</button>
+        <button type="button" id="sobremi">Haz click sobre mi</button>
+    </form>
+</body>
+</html>

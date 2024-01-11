@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado. Presentan un diseño elegante y deportivo ">
+    <title>Rueda BMW Modelo M Double Spoke, tamaño 18 pulgadas. Rueda coche lujo.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png" alt="Logo de web" width="130" height="50"></a>
+            <ul>
+                <li>
+                    <button onclick="window.location.href='index.html'">Inicio</button>
+                </li>
+                <li>
+                    <button class="selected" onclick="window.location.href='tienda.html'">Tienda</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='cuenta.html'">Mi cuenta</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='nosotros.html'">Sobre nosotros</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='ayuda.html'">Ayuda</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="bannerTienda">
+            <div id='cajaBannerTienda'>
+                <h1>Tienda</h1>
+            </div>
+            <div id="busqueda">
+                <input type="text" placeholder="Buscar un producto...">
+                <select name="coches" id="coches">
+                    <option value="coche1">Audi A1</option>
+                    <option value="coche2">Citroen Xsara</option>
+                </select>
+                <button>Buscar</button>
+            </div>
+        </div>
+        <a href="tienda.html">
+        <div id="atras">
+            <img src="img/flecha.png" alt="volver">
+        </div>
+        </a>
+        <table id="categorias">
+            <tr>
+                <th>
+                    <p>Componentes para tu coche: </p>
+                </th>
+                <td>
+                    <p><a href="">Ofertas</a></p>
+                </td>
+                <td>
+                    <p><a href="">Llantas y neumáticos</a></p>
+                </td>
+                <td>
+                    <p><a href="">Frenado</a></p>
+                </td>
+                <td>
+                    <p><a href="">Piezas de Motor</a></p>
+                </td>
+                <td>
+                    <p><a href="">Seguridad</a></p>
+                </td>
+                <td>
+                    <p><a href="">Accesorios</a></p>
+                </td>
+            </tr>
+        </table>
+        <div id="producto">
+            <img src="img/rueda.png" alt="">
+            <div id="productoDesc">
+                <h1>Llantas BMW 20 pulgadas X3 F25 X4 F26 estilo M310 ruedas de verano neumáticos.</h1>
+                <div id="puntaje">
+                    <img src="img/estrella.png" alt="estrella">
+                    <img src="img/estrella.png" alt="estrella">
+                    <img src="img/estrella.png" alt="estrella">
+                    <img src="img/estrella.png" alt="estrella">
+                    <img src="img/estrella.png" alt="estrella">
+                    <p>4.5/5</p>
+                </div>
+                <p id="Pdescripcion">Modelo M Double Spoke, tamaño 18 pulgadas.
+                    Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado. Presentan un diseño
+                    elegante y deportivo con un acabado en color negro mate que resalta la estética del vehículo. Las
+                    llantas están libres de abolladuras, grietas o daños estructurales, y han sido revisadas para
+                    garantizar su calidad y rendimiento.
+                    <br><br>
+                    Sonido Derrape(CUIDADO SONIDO ALTO):
+                </p>
+                <audio src="audio/engine.mp3" controls="true"></audio>
+                <div id="compraBotones">
+                    <p id="precio">
+                        59.95€
+                    </p>
+                    <button>Añadir a la cesta</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h4>Recreate</h4>
+        <ul>
+            <li class="footer-titulo">Política de privacidad</li>
+            <li><a href="">Política de cookies</a></li>
+            <li><a href="">Tratamiento de datos</a></li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Informacion de contacto</li>
+            <li>Ejemplo@redesing.com</li>
+            <li>644557734</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Establecimientos</li>
+            <li>Consulte todos los locales cercanos <a href="">aqui</a>.</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Redes sociales</li>
+            <li class="footer-rrss"><img src="img/facebook.svg" alt=""><a href="">Facebook</a></li>
+            <li class="footer-rrss"><img src="img/instagram.svg" alt=""><a href="">Instagram</a></li>
+        </ul>
+        <img id="cc" src="img/cc.svg" alt="Licencia Creative Commons">
+    </footer>
+</body>
+
+</html>
