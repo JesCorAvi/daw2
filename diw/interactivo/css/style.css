@@ -334,6 +334,10 @@ table p{
 
 }
 
+picture{
+    margin: 0 auto;
+}
+
 
 .seccion p {
     text-align: justify;
@@ -417,14 +421,33 @@ table p{
     opacity: 1;
     }
 
+.problemas p{
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    text-align: justify;
+    background-color: #363062;
+}
+
+
+
+.problemas:hover p{
+    margin-top: 1vh;
+    max-height: 250px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
 .problemas{
     margin: 0 auto;
     background-color: white;
     width: 60%;
     height: 40px;
-    margin-bottom: 30px;
     display: inline-block;
     margin-left: 20%;
+    border: 1px solid black;
 }
 .problemas h3{
     color:black;
@@ -486,6 +509,7 @@ table p{
 }
 
 #nota{
+    margin-top: 20px;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 20px;
@@ -702,9 +726,6 @@ table p{
 #productoDesc audio{
     margin-left: 50px;
     margin-top: 30px;
-
-
-
 }
 #puntaje p{
     display: inline;
@@ -720,13 +741,6 @@ table p{
     border: 3px solid #363062;
     border-collapse: collapse;
     height: 40px;
-}
-#producto img{
-    transition: transform 0.3s ease-in-out;
-
-}
-#producto img:hover{
-    transform: scale(1.5);
 }
 
 #Pdescripcion{
@@ -814,4 +828,66 @@ audio::-webkit-media-controls-panel {
 
 #cc{
     margin-left: 47%;
+}
+
+.carrousel {
+  width: 90%;
+  max-width: 120em;
+  padding: 2em;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  background-color: white;
+}
+
+.carrousel .grande {
+  width: 300%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  padding: 2em;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+
+
+}
+
+.carrousel .img {
+  width: calc( 100% / 3 - 3em);
+  min-height: 10vh;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  
+}
+
+.carrousel .puntos {
+  width: 100%;
+  margin: 1em 0 0;
+  padding: 0.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -90px;
+  top: 768px
+}
+
+.carrousel .punto {
+  width: 1em;
+  height: 1em;
+  margin: 1em 1em 0;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: #c57412;
+  list-style: none;
+  
+
+
+}
+
+.carrousel .punto.activo {
+  background-color: #F99417;
 }
