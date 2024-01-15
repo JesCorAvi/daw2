@@ -271,7 +271,8 @@ fieldset input {
 }
 
 table, td, th{
-    margin-top: 15px;
+    margin-top: 50px;
+    margin-bottom: 70px;
     border: 3px solid #363062;
     border-collapse: collapse;
     height: 40px;
@@ -296,6 +297,12 @@ table p{
     padding-left: 15px;
     padding-right: 15px;
     
+}
+
+#margen{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #4D4C7D;
 }
 
 #cajaBanner {
@@ -520,9 +527,10 @@ picture{
     margin: auto;
     background-color: white;
     width: 70%;
-    height: 150px;
+    height: 170px;
     margin-top: 20px;
     border: 5px solid #363062;
+    overflow: hidden;
 }
 
 .segmento button{
@@ -534,6 +542,7 @@ picture{
     border-radius: 5px;
     height: 20px;
     width: 80px;
+    
 }
 .segmento-titulo{
     display: inline;
@@ -759,8 +768,7 @@ picture{
 }
 #compraBotones{
     display: flex;
-    margin-left: 150px;
-    margin-bottom: 20px;
+    margin-top: 50px;
 
 }
 #compraBotones button{
@@ -872,7 +880,7 @@ audio::-webkit-media-controls-panel {
   align-items: center;
   position: absolute;
   left: -90px;
-  top: 768px
+  top: 838px
 }
 
 .carrousel .punto {
@@ -891,3 +899,4 @@ audio::-webkit-media-controls-panel {
 .carrousel .punto.activo {
   background-color: #F99417;
 }
+
