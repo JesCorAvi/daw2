@@ -3,6 +3,12 @@ const grande    = document.querySelector('.grande')
 const punto     = document.querySelectorAll('.punto')
 const segmento  = document.querySelectorAll('.segmento')
 const tab       = document.querySelectorAll('.tab')
+const img       = document.querySelectorAll('.img')
+const agrandar  = document.getElementById("agrandar")
+const agrandada = document.getElementById("agrandada")
+const cerrar    = document.getElementById("cerrar")
+
+
 punto.forEach( ( cadaPunto , i )=> {
     punto[i].addEventListener('click',()=>{
 
@@ -31,3 +37,14 @@ tab.forEach((cadaSegmento , i) =>{
             }
         })})})
 
+
+img.forEach((cadaSegmento , i) =>{
+    img[i].addEventListener('click',()=>{
+        agrandar.style.display = "block";
+        agrandada.src = img[i].src;
+    })
+})
+
+cerrar.addEventListener('click',()=>{
+    agrandar.style.display = "none";
+})

@@ -1,11 +1,20 @@
 var campo = document.querySelectorAll(".campo");
 var error = document.querySelectorAll(".error");
+var errores = [
+    "El dni no es correcto",
+    "El nombre no es correcto",
+    "La fecha de nacimiento no es correcta",
+    "El correo no es correcto",
+    "La dirección web no es correcta",
+    "La contraseña no es correcta",
+    "La contraseña no coincide",
+]
 
 campo.forEach((campoValor, i)=>{
     campo[i].addEventListener('focusout',()=>{
         if(!campo[i].checkValidity()) {
             campo[i].value = ""
-            error[i].innerHTML = "Error en el campo"
+            error[i].innerHTML = errores[i]
         }
         if( campo[i].name == "passw2" && campo[i].value != campo[i - 1].value){
             campo[i].value = ""
