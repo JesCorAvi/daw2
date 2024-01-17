@@ -1,5 +1,7 @@
-var campo = document.querySelectorAll(".campo");
-var error = document.querySelectorAll(".error");
+var campo   = document.querySelectorAll(".campo");
+var error   = document.querySelectorAll(".error");
+var guarda  = document.getElementById("guardar") 
+var ver     = document.getElementById("ver") 
 var errores = [
     "El dni no es correcto",
     "El nombre no es correcto",
@@ -9,8 +11,6 @@ var errores = [
     "La contraseña no es correcta",
     "La contraseña no coincide",
 ]
-
-var cookie
 
 campo.forEach((campoValor, i)=>{
     campo[i].addEventListener('focusout',()=>{
@@ -35,11 +35,20 @@ function comprobar(){
     })
     return true
 }
-function guardar(){
-    campo.forEach((campoValor, i)=>{
-        if(campo[i].value == "") {
-            document.cookie
-        }else {
-            alert("bien")}
+
+guarda.onclick = ()=>{
+        campo.forEach((campoValor, i)=>{
+            if(campo[i].value == "") {
+                document.cookie = `${campo[i].name} = ${null}`
+            }else {
+                document.cookie = `${campo[i].name} = ${campo[i].value}`
+            }
+        })
+}
+    
+ver.onclick = ()=>{
+    var ArrayCookie = document.cookie.split(";")
+    ArrayCookie.forEach((linea, x)=>{
+        document.write(ArrayCookie[x],"<br><br>")
     })
 }
