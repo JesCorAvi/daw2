@@ -37,13 +37,19 @@ function comprobar(){
 }
 
 guarda.onclick = ()=>{
+    var button = true
         campo.forEach((campoValor, i)=>{
             if(campo[i].value == "") {
                 document.cookie = `${campo[i].name} = ${null}`
+                window.alert(`El campo ${campo[i].name} esta vacio, se guardó la cookie igualmente pero puede presentar errores`)
+                button = false
             }else {
                 document.cookie = `${campo[i].name} = ${campo[i].value}`
             }
         })
+    if (button){
+        window.alert(`Contraseña gardada con éxito`)
+    }
 }
     
 ver.onclick = ()=>{

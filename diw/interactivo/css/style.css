@@ -285,6 +285,10 @@ th {
 td{
     background-color: #F99417;
 }
+td:hover{
+    background-color: #ecb775;
+    cursor: pointer; 
+}
 td a{
     color: #363062;
     text-decoration: none;
@@ -435,8 +439,6 @@ picture{
     text-align: justify;
     background-color: #363062;
 }
-
-
 
 .problemas:hover p{
     margin-top: 1vh;
@@ -721,8 +723,8 @@ picture{
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
-
 }
+
 #puntaje{
     margin-left: 50px;
 }
@@ -730,12 +732,13 @@ picture{
 #productoDesc{
     background-color: white;
     width: 100%;
-
 }
+
 #productoDesc audio{
     margin-left: 50px;
     margin-top: 30px;
 }
+
 #puntaje p{
     display: inline;
     font-weight: 600;
@@ -769,7 +772,6 @@ picture{
 #compraBotones{
     display: flex;
     margin-top: 50px;
-
 }
 #compraBotones button{
     background-color: #F99417;
@@ -868,6 +870,9 @@ audio::-webkit-media-controls-panel {
   transition: all 0.4s ease;
   border-radius: 1em;
 }
+.carrousel .img:hover {
+    cursor: zoom-in;
+  }
 
 #agrandar{
     display: none;
@@ -878,6 +883,7 @@ audio::-webkit-media-controls-panel {
     top: 30px;
     left: 400px
 }
+
 #agrandar #cerrar{
     font-size:15px;
     font-weight:800;
@@ -889,6 +895,9 @@ audio::-webkit-media-controls-panel {
     margin-left: 23vw;
     text-align: center;
     align-items: center;
+}
+#agrandar #cerrar{
+    cursor: pointer; 
 }
 
 #agrandada{
@@ -918,11 +927,11 @@ audio::-webkit-media-controls-panel {
   border-radius: 1em;
   background-color: #c57412;
   list-style: none;
-  
-
-
 }
+.carrousel .punto:hover {
+    cursor: pointer; 
 
+  }
 .carrousel .punto.activo {
   background-color: #F99417;
 }
