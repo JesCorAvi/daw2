@@ -1,38 +1,15 @@
-let formulario = document.getElementById('formulario');
 let nombre = document.getElementById('nombre');
-let ape = document.getElementById('ape');
+let apellido = document.getElementById('ape');
 let dni = document.getElementById('dni');
-let age = document.getElementById('age');
-let nac = document.getElementById('nac');
-let submit = document.getElementById('submit');
-const letra = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K'];
+let edad = document.getElementById('age');
+let nacimiento = document.getElementById('nac');
+let guardar = document.getElementById('submit');
+const letra =[
+                'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 
+                'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K'
+             ];
 
-formulario.addEventListener('change', validarTodos);
-dni.addEventListener('input', validarDni);
-nombre.addEventListener('input', validarNombre);
-ape.addEventListener('input', validarApe);
-age.addEventListener('input', validarAge);
-nac.addEventListener('input', validarNac);
-
-
-function validarDni() {
-    if (dni.validity.valueMissing) {
-        dni.setCustomValidity('Introduce un valor de DNI.');
-    } else if (dni.validity.patternMismatch) {
-        dni.setCustomValidity('DNI no válido.');
-    } else if (!letraDni(dni.value)) {
-        dni.setCustomValidity('Letra errónea.');
-    } else {
-        dni.setCustomValidity('');
-    }
-
-    if (dni.checkValidity()) {
-        return true;
-    } else {
-        return false;
-    }
-}
-function letraDni(dni) {
+function vletra(dni) {
     let d = dni.split('-');
     if (d.length >= 2) {
         let numeroDni = d[0].replaceAll('.', '');
@@ -42,7 +19,23 @@ function letraDni(dni) {
         return false;
     }
 }
-function validarNombre() {
+
+function vDni() {
+    if (dni.validity.valueMissing) {
+        dni.setCustomValidity('Introduce un valor de DNI.');
+    } else if (dni.validity.patternMismatch) {
+        dni.setCustomValidity('DNI no válido.');
+    } else if (!vletra(dni.value)) {
+        dni.setCustomValidity('Letra errónea.');
+    } else {
+        dni.setCustomValidity('');
+    }
+    return dni.checkValidity();  
+}
+
+dni.addEventListener('input', vDni);
+
+function vNombre() {
     if (nombre.validity.valueMissing) {
         nombre.setCustomValidity('Introduce un nombre.');
     } else if (nombre.validity.patternMismatch) {
@@ -50,64 +43,63 @@ function validarNombre() {
     } else {
         nombre.setCustomValidity('');
     }
-
-    if (nombre.checkValidity()) {
-        return true;
-    } else {
-        return false;
-    }
+    return nombre.checkValidity()
 }
-function validarApe() {
-    if (ape.validity.valueMissing) {
-        ape.setCustomValidity('Introduce un ape.');
+
+nombre.addEventListener('input', vNombre);
+
+function vApellido() {
+    if (apellido.validity.valueMissing) {
+        apellido.setCustomValidity('Introduce un apellido.');
     } else if (ape.validity.patternMismatch) {
-        ape.setCustomValidity('ape no válido.');
+        apellido.setCustomValidity('Apellido no válido.');
     } else {
-        ape.setCustomValidity('');
+        apellido.setCustomValidity('');
     }
-
-    if (ape.checkValidity()) {
-        return true;
-    } else {
-        return false;
-    }
+    return apellido.checkValidity()
 }
-function validarAge() {
-    if (age.validity.valueMissing) {
-        age.setCustomValidity('Introduce un age.');
+
+apellido.addEventListener('input', vApellido);
+
+function vEdad() {
+    if (edad.validity.valueMissing) {
+        edad.setCustomValidity('Introduce una Edad.');
     } else if (age.validity.patternMismatch) {
-        age.setCustomValidity('age no válido.');
+        edad.setCustomValidity('Edad no válida.');
     } else {
-        age.setCustomValidity('');
+        edad.setCustomValidity('');
     }
-
-    if (age.checkValidity()) {
-        return true;
-    } else {
-        return false;
-    }
+    return edad.checkValidity()
 }
-function validarNac() {
-    if (nac.validity.valueMissing) {
-        nac.setCustomValidity('Introduce un nac.');
+
+edad.addEventListener('input', vEdad);
+
+function vNacimiento() {
+    if (nacimiento.validity.valueMissing) {
+        nacimiento.setCustomValidity('Introduce una Fecha de Nacimiento.');
     } else if (nac.validity.patternMismatch) {
-        nac.setCustomValidity('nac no válido.');
+        nacimiento.setCustomValidity('Fecha de Nacimiento no válida.');
     } else {
-        nac.setCustomValidity('');
+        nacimiento.setCustomValidity('');
     }
+    return nacimiento.checkValidity()
+}
 
-    if (nac.checkValidity()) {
-        return true;
-    } else {
-        return false;
-    }
+var formulario = document.getElementById("formulario")
+nacimiento.addEventListener('input', vNacimiento);
+formulario.addEventListener('submit', vTodo);
+
+function vTodo(e) {
+    if (
+            !vDni(dni) || 
+            !vNombre(nombre) || 
+            !vApellido(apellido) ||
+            !vEdad(edad) ||
+            !vNacimiento(nacimiento)
+        ) 
+        {e.preventDefault();}
 }
-function validarTodos(e) {
-    if (!validarDni(dni) && !validarNombre(nombre) && !validarApe(ape)
-        && !validarAge(age) && !validarNac(nac)) {
-        e.preventDefault();
-    }
-}
+
 function limpiarCampo(campo) {
     campo.value = '';
 }
@@ -119,3 +111,7 @@ function ocultarDni() {
     var dniInput = document.getElementById('dni');
     dniInput.type = 'password';
 }
+
+ver.addEventListener("mousedown", mostrarDni)
+
+ver.addEventListener("mouseup", ocultarDni)

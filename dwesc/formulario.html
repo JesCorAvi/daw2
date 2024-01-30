@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <script defer src="formulario.js"></script>
+    <title>hola</title>
+    <script src="formulario.js" defer></script>
 </head>
 
 <body>
@@ -14,13 +14,13 @@
         <fieldset>
             <legend>DATOS PERSONALES DE ACCESO</legend>
             <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre" pattern="[A-Z][a-z]+" required><br>
+            <input type="text" name="nombre" id="nombre" pattern="^[A-Z][a-z]+( [A-Z][a-z]+)?$" required><br>
             <label for="ape">Apellido: </label>
-            <input type="text" name="ape" id="ape" pattern="[A-Z][a-z]+" required><br>
+            <input type="text" name="ape" id="ape" pattern="^[A-Z][a-z]+( [A-Z][a-z]+)?$" required><br>
             <label for="dni">DNI: </label>
-            <input type="password" name="dni" id="dni" pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[A-Z]"><br>
+            <input type="password" name="dni" id="dni" pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[A-Z]" required><br>
             <label for="age">Edad: </label>
-            <input type="text" name="age" id="age" pattern="^(12[0-0]|1[01][0-9]|[1-9]?[0-9])$" required><br>
+            <input type="number" name="age" id="age" min="12" max="99" required><br>
             <label for="sex">Sexo:</label>
             <select name="sex" id="sex" required>
                 <option value="mas">Masculino</option>
@@ -28,16 +28,14 @@
                 <option value="otr">Otros</option>
             </select><br>
             <label for="nac">Lugar de Nacimiento</label>
-            <input type="text" name="nac" id="nac" pattern="[A-Z][A-Za-z]{3,}" required>
+            <input type="text" name="nac" id="nac" pattern="^[A-Z][a-z]+( \w[a-z]+)*$" required>
         </fieldset>
         <br>
         <div>
             <input type="submit" value="GUARDAR" id="submit">
     </form>
-    <input type="button" id="ver" value="VER" onmousedown="mostrarDni()" onmouseup="ocultarDni()"
-        onmouseleave="ocultarDni()">
+        <input type="button" id="ver" value="VER">
     </div>
-    <script src="5-6-7.js"></script>
 </body>
 
 </html>
