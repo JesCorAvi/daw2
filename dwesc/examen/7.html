@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+    <script src="7.js" defer></script>
+
+</head>
+<body>
+    <form action="mailto:Rafael.figueroa@iesdonana.org" method="post" id="formulario">
+        <fieldset>
+            <legend>DATOS PERSONALES DE ACCESO</legend>
+            <input class="campo" placeholder="Nombre" type="text" name="nombre" id="nombre" pattern="[A-Z][a-z]{1,}" required>
+            <label for="Nombre" class="error"></label>
+            <br>
+            <input class="campo" placeholder="Apellido" type="text" name="ape" id="ape" pattern="[A-Z][a-z]{1,}" required>
+            <label for="ape" class="error"></label>
+            <br>
+            <input class="campo" placeholder="Edad" type="number" name="age" id="age" min="0" max="120" required>
+            <label for="age" class="error"></label>
+            <br>
+            <input class="campo" placeholder="DNI 99.999.999-X" type="password" name="dni" id="dni" pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[A-Z]" required>
+            <label for="dni" class="error"></label>
+            <br>
+            <label for="nac">Sexo</label>
+            <select name="sex" id="sex" required>
+                <option value="mas">Masculino</option>
+                <option value="fem">Femenino</option>
+            </select><br>
+            <label  for="nac">Lugar de nacimiento</label>
+            <input class="campo" type="text" name="nac" id="nac" pattern="^[A-Z][a-z]{3,}" required>
+            <label for="nac" class="error"></label>
+        </fieldset>
+        <br>
+        <button type="submit" id="submit">Guardar</button>
+        <button type="button" id="ver">Ver</button>
+    </form>
+</body>
+</html>

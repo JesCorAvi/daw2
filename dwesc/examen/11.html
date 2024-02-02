@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encuesta</title>
+    <script src="11.js" defer></script>
+</head>
+<body>
+    <form action="">
+        <label for="cafe">¿Que tipo de cafe te gusta mas?</label><br>
+        <input type="radio" name="cafe" value="solo">
+        <label>Café Solo</label><br>
+        <input type="radio" name="cafe" value="leche">
+        <label>Café con leche</label><br>
+        <input type="radio" name="cafe" value="descafeinado">
+        <label>Café descafeinado</label><br>
+        <input type="radio" name="cafe" value="hielo">
+        <label>Café solo con hielo</label><br>
+        <br>
+        <button type="button" id="votar">Votar!</button>
+    </form>
+    <br><br>
+    <progress id="solo" value="0" max="100"></progress>
+    <label for="solo" id="soloP"></label>| Café Solo <br>
+    <progress id="leche" value="0" max="100"></progress>
+    <label for="leche" id="lecheP"></label>| Café con leche<br> 
+    <progress id="descafeinado" value="0" max="100"> </progress>
+    <label for="descafeinado" id="descafeinadoP"></label>| Café descafeinado<br> 
+    <progress id="hielo" value="0" max="100"></progress>
+    <label for="hielo" id="hieloP"></label>| Café solo con hielo 
+    <form action="mailto:Rafael.figueroa@iesdonana.org" method="post">
+        <button id="enviar">Enviar resultados</button>
+    </form>
+</body>
+</html>

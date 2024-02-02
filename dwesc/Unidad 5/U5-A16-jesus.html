@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="">
-        <label for="sistema">¿Que sistea operativo te gusta mas?</label><br>
+        <label for="sistema">¿Que sistema operativo te gusta mas?</label><br>
         <input type="radio" name="sistema" value="iOS">
         <label>iOS</label><br>
         <input type="radio" name="sistema" value="Android">
@@ -21,10 +21,14 @@
         <button type="button" id="votar">Votar!</button>
     </form>
     <br><br>
-    <progress id="iOS" value="0" max="100"></progress> IOS <br>
-    <progress id="Android" value="0" max="100"></progress> Android<br> 
-    <progress id="Windows_Phone" value="0" max="100"> </progress> Windows Phone<br> 
-    <progress id="Otro" value="0" max="100"></progress> Otro 
+    <progress id="iOS" value="0" max="100"></progress>
+    <label for="iOS" id="iOSP"></label>| IOS <br>
+    <progress id="Android" value="0" max="100"></progress>
+    <label for="Android" id="AndroidP"></label>| Android<br> 
+    <progress id="Windows_Phone" value="0" max="100"> </progress>
+    <label for="Windows_Phone" id="WindowsP"></label>| Windows Phone<br> 
+    <progress id="Otro" value="0" max="100"></progress>
+    <label for="Otro" id="OtroP"></label>| Otro 
 
 </body>
 </html>

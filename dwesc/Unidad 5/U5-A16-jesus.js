@@ -28,9 +28,17 @@ function recalcular(){
   let otro    = parseInt(getCookie("Otro"));
   let total   = ios + android + windows + otro;
   document.getElementById("iOS").value = (ios / total * 100);
+  document.getElementById("iOSP").innerHTML = (ios / total * 100).toFixed(2) + "%";
+
   document.getElementById("Android").value = (android / total * 100);
+  document.getElementById("AndroidP").innerHTML = (android / total * 100).toFixed(2) + "%";
+
   document.getElementById("Windows_Phone").value = (windows / total * 100);
+  document.getElementById("WindowsP").innerHTML = (windows / total * 100).toFixed(2) + "%";
+
   document.getElementById("Otro").value = (otro / total * 100);
+  document.getElementById("OtroP").innerHTML = (otro / total * 100).toFixed(2) + "%";
+
 }
 votar.onclick = ()=>{
   radio.forEach((rad, i) => {

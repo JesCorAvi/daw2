@@ -3,7 +3,6 @@
 function moverPato(){
 
     document.addEventListener("keydown", x =>{
-        console.log(x.code)
         if(x.code == "ArrowUp" || x.code == "Numpad8" ){
             ejex -= 1
             document.getElementById("pato").style.top = `${ejex}px`;

@@ -25,10 +25,7 @@ document.addEventListener("mousemove", (e)=>{
     }
 })
 
-
-
-
-patoDiv.addEventListener("mouseup", ()=>{
+document.addEventListener("mouseup", ()=>{
     boton = false
     patoImg.src = "pato.png"
 
