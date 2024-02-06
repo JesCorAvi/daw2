@@ -1,9 +1,10 @@
-var trabajadores
-//Tiene que abrirse en live server
 fetch('./U7-A01.json')
     .then((response) => response.json())
-    .then((json) => document.write(
-        
-        )
-    );
-
+    .then((json) => json.departamento.trabajador.forEach(trabaj => {
+        document.getElementById("lista").innerHTML +=     
+        `
+            Nombre: ${trabaj.nombre}<br>
+            Apellidos: ${trabaj.apellidos}<br><br>
+        `
+        })
+    )
