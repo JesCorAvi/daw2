@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación</title>
+    <script src="sugerencias.js" defer></script>
+</head>
+<body>
+        <h3>¿Que equipo crees que va a ganar la liga este año?</h3>
+        <input type="radio" name="equipo" value="1">
+        <label>Real Madrid</label><br>
+        <input type="radio" name="equipo" value="2">
+        <label>Barcelona</label><br>
+        <input type="radio" name="equipo" value="3">
+        <label>Atlético de Madrid</label><br>
+        <input type="radio" name="equipo" value="4">
+        <label>Sevilla</label><br>
+        <br>
+        <button type="button" id="votar">Votar!</button>
+    <br><br>
+    <progress id="1" value="0" max="100"></progress>
+    <label for="1" id="1P"></label>| Real Madrid <br>
+    <progress id="2" value="0" max="100"></progress>
+    <label for="2" id="2P"></label>| Barcelona<br> 
+    <progress id="3" value="0" max="100"> </progress>
+    <label for="3" id="3P"></label>| Atlético de Madrid<br> 
+    <progress id="4" value="0" max="100"></progress>
+    <label for="4" id="4P"></label>| Sevilla 
+</body>
+</html>
