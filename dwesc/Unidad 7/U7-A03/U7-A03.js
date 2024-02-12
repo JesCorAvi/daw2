@@ -3,7 +3,7 @@ var radio = document.getElementsByName("equipo");
 votar.onclick = ()=>{
     radio.forEach((rad, i) => {
       if (radio[i].checked){
-        fetch('ciudadessugerencias.php?input=' + radio[i].value)
+        fetch('guardarvotos.php?input=' + radio[i].value)
                 .then(function(response) {
                     return response.text();
                 })
