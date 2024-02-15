@@ -1,0 +1,15 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+p{
+  font-size: 30px;
+  color: tomato;
+  font-weight: 800;
+  background-color: lightblue;
+  border-radius: 30px;
+  padding: 50px;
+  border: 10px solid tomato;
+}
