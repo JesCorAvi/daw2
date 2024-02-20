@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Recreate. Apartado de ayuda que te solucionará cualquier problema que tengas con nuestra web. No dude en usar nuestro formulario para ponerse en contacto con profesionales.">
+    <title>Ayuda. Pide ayuda con algún problema surgido en la web Recreate.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="encabezado vertical fijado a la parte superior de la web">
+            <a href="index.html"><img src="img/logo.png" alt="Logo de web" width="130" height="50"></a>
+            <ul>
+                <li>
+                    <button onclick="window.location.href='index.html'">Inicio</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='tienda.html'">Tienda</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='cuenta.html'">Mi cuenta</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='nosotros.html'">Sobre nosotros</button>
+                </li>
+                <li>
+                    <button aria-current="page" class="selected" onclick="window.location.href='ayuda.html'">Ayuda</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="bannerAyuda">
+            <div id='cajaBanner'>
+                <h1>Ayuda</h1>
+            </div>
+        </div>
+        <br><br>
+        <div id="contenedorProblemas">
+            <div class="problemas" id="menu1">
+                <h3>Problemas con la conectividad o el inicio de sesión.</h3>
+                <p>
+                    Para solucionar estos problemas, debes verificar la conectividad de Internet a tu servidor. Aquí
+                    tienes algunos consejos:
+                    <br><br>
+                    Realiza comprobaciones ping y traceroute. Compara los resultados con otros sitios. Usualmente, los
+                    resultados de menos de 200 ms están bien y no indican problemas;
+                    Intenta trabajar en tu panel de control (Site Tools, Plesk, etc.);
+                    Comprueba con qué rapidez se descargas los emails.
+
+                </p>
+            </div>
+            <div class="problemas" id="menu2">
+                <h3>Problemas con el visionado de la web.</h3>
+                <p>Lo primero que tenemos que determinar es si el sitio web al que estamos intentando acceder no carga,
+                    nos muestra algún tipo de error o carga de manera muy lenta. Cada una suele indicarnos cosas muy
+                    diferentes, y en el caso de que, por ejemplo, no nos cargue, puede que incluso no tenga solución si
+                    el fallo es por parte del servidor del sitio web.
+                </p>
+            </div>
+            <div class="problemas" id="menu3">
+                <h3>Problemas con el estado del vehículo o vehículos faltantes.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis luctus odio, sed condimentum
+                    dolor pretium a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus felis sed
+                    lorem pharetra, blandit elementum nibh pellentesque. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Vestibulum vehicula, leo nec bibendum convallis, mauris nulla rhoncus orci, vel
+                    euismod ante erat id ex. Nam scelerisque feugiat est non ultricies. Praesent mi sem, vehicula vel
+                    nunc vestibulum, dignissim vestibulum augue. Mauris at congue justo. Praesent quis pellentesque
+                    urna. Cras sed magna et felis vehicula semper. Vivamus sodales velit vel elit mollis, et sagittis
+                    lectus gravida. Pellentesque metus ante, venenatis non ipsum quis, gravida lobortis massa. Nunc
+                    pulvinar nibh leo, vitae ullamcorper ipsum cursus vel. Ut in libero ante. Aliquam non viverra eros.
+                </p>
+            </div>
+            <div class="problemas" id="menu4">
+                <h3>Problemas con el pago o con las devoluciones.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis luctus odio, sed condimentum
+                    dolor pretium a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus felis sed
+                    lorem pharetra, blandit elementum nibh pellentesque. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Vestibulum vehicula, leo nec bibendum convallis, mauris nulla rhoncus orci, vel
+                    euismod ante erat id ex. Nam scelerisque feugiat est non ultricies. Praesent mi sem, vehicula vel
+                    nunc vestibulum, dignissim vestibulum augue. Mauris at congue justo. Praesent quis pellentesque
+                    urna. Cras sed magna et felis vehicula semper. Vivamus sodales velit vel elit mollis, et sagittis
+                    lectus gravida. Pellentesque metus ante, venenatis non ipsum quis, gravida lobortis massa. Nunc
+                    pulvinar nibh leo, vitae ullamcorper ipsum cursus vel. Ut in libero ante. Aliquam non viverra eros.
+                </p>
+            </div>
+        </div>
+        <p id="nota">
+            Si necesita ayuda y su problema no aparece arriba, puede hacer uso de nuestro
+            de formulario de contacto a continucación.
+        </p>
+        <form action="get">
+            <fieldset>
+                <legend>Formulario de contacto</legend>
+                <div id="formulario">
+                    <div class="tooltip-container">Correo*
+                        <span class="tooltip-text">Campo obligatorio</span>
+                    </div>
+                    <input type="email" aria-label="email" required aria-required>
+                    <label>Nombre y Apellidos</label>
+                    <input type="text" aria-label="Nombre y apellidos">
+                    <div class="tooltip-container">Describa su problema*
+                        <span class="tooltip-text">Campo obligatorio</span>
+                    </div>
+                    <textarea required aria-label="escriba aqui su consulta"></textarea>
+                    <div id="form_check">
+                        <button>Enviar</button>
+                        <input type="checkbox" name="confirm" id="confirm"
+                            aria-label="Acepto compatir mi correo electrónico con Recreate" required aria-required>
+                        <label>Acepto compatir mi correo electrónico con Recreate*</label>
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+
+
+    </main>
+    <footer>
+        <h4>Recreate</h4>
+        <ul>
+            <li class="footer-titulo">Política de privacidad</li>
+            <li><a href="">Política de cookies</a></li>
+            <li><a href="">Tratamiento de datos</a></li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Informacion de contacto</li>
+            <li>Ejemplo@redesing.com</li>
+            <li>644557734</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Establecimientos</li>
+            <li>Consulte todos los locales cercanos <a href="">aqui</a>.</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Redes sociales</li>
+            <li class="footer-rrss"><img src="img/facebook.svg" alt="logo facebook"><a href="">Facebook</a></li>
+            <li class="footer-rrss"><img src="img/instagram.svg" alt="logo instagram"><a href="">Instagram</a></li>
+        </ul>
+        <img id="cc" src="img/cc.svg" alt="Licencia Creative Commons">
+    </footer>
+</body>
+
+</html>

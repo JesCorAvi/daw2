@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recreate. Tu cuenta, el especio personal donde consta toda la información de sus vehículos. Desde aquí podrá cambiar su plan de cuenta o montar nuevos componentes.">
+    <title>Tu cuenta. Tu espacio personal donde ver el estado de su vehículo y demás.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="encabezado vertical fijado a la parte superior de la web">
+            <a href="index.html"><img src="img/logo.png" alt="Logo de web" width="130" height="50"></a>
+            <ul>
+                <li>
+                    <button onclick="window.location.href='index.html'">Inicio</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='tienda.html'">Tienda</button>
+                </li>
+                <li>
+                    <button aria-current="page" class="selected" onclick="window.location.href='cuenta.html'">Mi cuenta</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='nosotros.html'">Sobre nosotros</button>
+                </li>
+                <li>
+                    <button  onclick="window.location.href='ayuda.html'">Ayuda</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="bannerCuenta" wai-aria="button">
+            <div id='cajaBanner'>
+                <h1>Mi Cuenta</h1>
+            </div>
+        </div>
+    </main>
+    <div id="areaPersonal">
+        <div id="cuentaVehiculos" wai-aria="button">
+            <div class="areaPersonalTitulos">
+                <h2>Mis vehículos</h2>
+            </div>
+        </div>
+        <div id="cuentaFicha" wai-aria="button">
+            <div class="areaPersonalTitulos">
+                <h2>Ficha personal</h2>
+            </div>
+        </div>
+        <div id="cuentaCitas" wai-aria="button">
+            <div class="areaPersonalTitulos">
+                <h2>Mis citas</h2>
+            </div>
+        </div>
+    </div>    
+    <div id="rectTitulo">
+        <h2>Plan personal</h2>
+
+    </div>
+    <div id="rectPlanes">
+        <div class="plan">
+            <h3>Plan ahorro</h3>
+            <ul>
+                <li>Límite vehiculos: 1</li>
+                <li>Simulador de desgaste limitado.</li>
+                <li>Revisiones anuales gratuitas: 1</li>
+                <li class="empty">-</li>
+                <li class="empty">-</li>
+            </ul>
+            <p class="precio">9,95€</p>
+            <p class="precioTiempo">Al mes</p>
+            <button>Me interesa!</button>
+        </div>
+        <div class="plan">
+            <h3>Plan Standart</h3>
+            <ul>
+                <li>Límite vehiculos: 5</li>
+                <li>Simulador de desgaste.</li>
+                <li>Revisiones anuales gratuitas: 5</li>
+                <li>Ofertas exclusivas</li>
+                <li class="empty">-</li>
+            </ul>
+            <p class="precio">19,95€</p>
+            <p class="precioTiempo">Al mes</p>
+            <p id="actual">Plan actual</p>
+        </div>
+        <div class="plan">
+            <h3>Plan profesional</h3>
+            <ul>
+                <li>Límite vehiculos: Ilimitado</li>
+                <li>Simulador de desgaste con IA.</li>
+                <li>Prioridad de cita.</li>
+                <li>Revisiones anuales gratuitas: 20</li>
+                <li>Muchas mas ofertas exclusivas</li>
+            </ul>
+            <p class="precio">49,95€</p>
+            <p class="precioTiempo">Al mes</p>
+            <button>Me interesa!</button>
+        </div>
+    </div>
+    <div id="margenFin">
+    </div>
+    <footer>
+        <h4>Recreate</h4>
+        <ul>
+            <li class="footer-titulo">Política de privacidad</li>
+            <li><a href="">Política de cookies</a></li>
+            <li><a href="">Tratamiento de datos</a></li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Informacion de contacto</li>
+            <li>Ejemplo@redesing.com</li>
+            <li>644557734</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Establecimientos</li>
+            <li>Consulte todos los locales cercanos <a href="">aqui</a>.</li>
+        </ul>
+        <ul>
+            <li class="footer-titulo">Redes sociales</li>
+            <li class="footer-rrss"><img src="img/facebook.svg" alt="logo de facebook"><a href="">Facebook</a></li>
+            <li class="footer-rrss"><img src="img/instagram.svg" alt="logo de instagram"><a href="">Instagram</a></li>
+        </ul>
+        <img id="cc" src="img/cc.svg" alt="Licencia Creative Commons">
+    </footer>
+</body>
+
+</html>
