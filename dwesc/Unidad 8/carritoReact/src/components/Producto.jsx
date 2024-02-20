@@ -1,15 +1,15 @@
 import '../css/style.css'
 
 
-function Producto() {
+function Producto(props) {
 
   return (
     <div className="producto">
-		<img src="../assets/img/tienda6.png"></img>
-		<p>Llantas BMW 20 pulgadas X3 F25 X4 F26 estilo M310 ruedas de verano neumáticos</p>
+		<img src={`../assets/img/${props.img}.png`}></img>
+		<p>{props.text}</p>
 		<div className="productoInfo">
-			<p> Cantidad: </p>
-			<p><a href="#">-</a> 50 <a href="#">+</a></p>
+			<p> Cantidad </p>
+			<p><a href="#">-</a> {props.cant} <a href="#">+</a></p>
 		</div>
     </div>
   )

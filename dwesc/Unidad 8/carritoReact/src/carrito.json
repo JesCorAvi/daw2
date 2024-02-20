@@ -1,0 +1,22 @@
+{
+    "carrito":
+    [
+        {
+            "nombre": "Llantas BMW 20 pulgadas X3 F25 X4 F26 estilo M310 ruedas de verano neumáticos",
+            "imagen": "tienda6",
+            "cantidad": 40
+        },
+        {
+            "nombre": "Tubo de escape",
+            "imagen": "tienda4",
+
+            "cantidad": 233
+        },
+        {
+            "nombre": "Tuberia de desague",
+            "imagen": "tienda2",
+            "cantidad": 23
+        }
+
+    ]   
+}

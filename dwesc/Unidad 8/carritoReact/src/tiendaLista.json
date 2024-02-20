@@ -1,0 +1,55 @@
+{
+    "tienda":
+    [
+        {
+            "nombre": "Motor V8 HEMI 6.4L para Dodge Challenger SRT",
+            "descripcion": "Potente motor de 6.4 litros con tecnología HEMI, diseñado para proporcionar una aceleración explosiva y un sonido característico. Ideal para mejorar el rendimiento de tu Dodge Challenger SRT.",
+            "precio": "59.95€",
+            "imagen": "tienda1"
+        },
+        {
+            "nombre": "Kit de carrocería carbono Fiberworx para Subaru WRX STI",
+            "descripcion": "Conjunto completo de piezas de carrocería fabricadas en fibra de carbono ultraligera y resistente. Añade un aspecto agresivo y aerodinámico a tu Subaru WRX STI, mejorando la estética y el rendimiento.",
+            "precio": "59.95€",
+            "imagen": "tienda2"
+        },
+        {
+            "nombre": "Sistema de escape Armytrix para Audi RS5",
+            "descripcion": "Escape de alto rendimiento con válvulas electrónicas controlables para ajustar el sonido según tu preferencia. Ofrece un aumento de potencia y un tono de escape deportivo que mejora la experiencia de conducción.",
+            "precio": "89.95€",
+            "imagen": "tienda3"
+        },
+        {
+            "nombre": "Suspensión coilover BC Racing BR para Honda Civic Type R",
+            "descripcion": "Kit de suspensión coilover ajustable en altura y dureza, diseñado para ofrecer un manejo preciso y una conducción deportiva. Ideal para maximizar el rendimiento en pista y carretera del Honda Civic Type R.",
+            "precio": "29.95€",
+            "imagen": "tienda4"
+        },
+        {
+            "nombre": "Juego de frenos de carbono cerámicos Brembo para Porsche 911 GT3",
+            "descripcion": "Sistema de frenado de alto rendimiento con discos de carbono cerámicos y pinzas de freno de última generación. Proporciona una frenada potente y consistente, ideal para la conducción deportiva en circuito.",
+            "precio": "129.95€",
+            "imagen": "tienda5"
+        },
+        {
+            "nombre": "Llantas BMW 20 pulgadas X3 F25 X4 F26 estilo M310 ruedas de verano neumáticos",
+            "descripcion": "Modelo M Double Spoke, tamaño 18 pulgadas. Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado. Presentan un diseño elegante y deportivo con un acabado en color negro mate que resalta la estética del vehículo. Las llantas están libres de abolladuras, grietas o daños estructurales, y han sido revisadas para garantizar su calidad y rendimiento. ",
+            "precio": "349.95€",
+            "imagen": "tienda6"
+        },
+        {
+            "nombre": "Sistema de gestión de motor Haltech Elite 2500",
+            "descripcion": "Unidad de control de motor programable de última generación, diseñada para optimizar el rendimiento del motor mediante la gestión precisa de la inyección de combustible, el encendido y otros parámetros clave. Compatible con una amplia gama de aplicaciones y configuraciones de motor para lograr un rendimiento óptimo en cualquier situación.",
+            "precio": "239.95€",
+            "imagen": "tienda7"
+        },
+        {
+            "nombre": "Asientos deportivos Sparco Evo para Subaru Impreza WRX",
+            "descripcion": "Asientos tipo cubo diseñados para ofrecer un excelente soporte lateral y comodidad durante la conducción deportiva. Fabricados con materiales de alta calidad para resistir las demandas del pilotaje agresivo.",
+            "precio": "435.95€",
+            "imagen": "tienda8"
+
+        }
+
+    ]   
+}

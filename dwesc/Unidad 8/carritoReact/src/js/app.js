@@ -1,4 +1,5 @@
 'use strict'
+/*
 const grande    = document.querySelector('.grande')
 const punto     = document.querySelectorAll('.punto')
 const segmento  = document.querySelectorAll('.segmento')
@@ -48,3 +49,4 @@ img.forEach((cadaSegmento , i) =>{
 cerrar.addEventListener('click',()=>{
     agrandar.style.display = "none";
 })
+*/

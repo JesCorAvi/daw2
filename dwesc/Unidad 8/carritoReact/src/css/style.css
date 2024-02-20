@@ -988,6 +988,9 @@ audio::-webkit-media-controls-panel {
     height: 30px;
     color: black;
 }
+.productoInfo{
+    margin-left: auto;
+}
 .productoInfo p{
     font-size: 15px;
 }
@@ -998,4 +1001,14 @@ audio::-webkit-media-controls-panel {
 }
 .producto a{
     text-decoration: none;
+}
+
+#button{
+    background-color: #F99417;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: #363062;
+    margin-top: 20px;
 }
