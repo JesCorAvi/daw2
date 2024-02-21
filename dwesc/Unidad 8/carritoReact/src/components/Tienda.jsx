@@ -23,33 +23,7 @@ function Tienda(props) {
 						<button>Buscar</button>
 					</div>
 				</div>
-				<table id="categorias" aria-describedby="Tabla de navegación de categorias">
-					<tbody>
-						<tr>
-							<th>
-								<p>Componentes para tu coche: </p>
-							</th>
-							<td className="tab" role="button">
-								<p>Ofertas</p>
-							</td>
-							<td className="tab">
-								<p>Llantas y neumáticos</p>
-							</td>
-							<td className="tab" role="button">
-								<p>Frenado</p>
-							</td>
-							<td className="tab" role="button">
-								<p>Piezas de Motor</p>
-							</td>
-							<td className="tab" role="button">
-								<p>Seguridad</p>
-							</td>
-							<td className="tab" role="button">
-								<p>Accesorios</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				
 				<div className="segmento" id="segmento1" wai-aria="section">
 					<p className="segmento-titulo">Ofertas</p>
 					<button>Ver más...</button>
