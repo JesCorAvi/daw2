@@ -715,6 +715,19 @@ picture{
     margin-top: 20px;
     margin-left: 10%;
     margin-right: 10%;
+    height: 400px;
+}
+#divImagen{
+    text-align: center;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+}
+#imagenProducto{
+    padding: 0 auto;
+    width: 320px;
+    height: 300px;
+    padding-top: 50px;
 }
 
 #producto h1{
@@ -729,15 +742,7 @@ picture{
     margin-left: 50px;
 }
 
-#productoDesc{
-    background-color: white;
-    width: 100%;
-}
 
-#productoDesc audio{
-    margin-left: 50px;
-    margin-top: 30px;
-}
 
 #puntaje p{
     display: inline;
@@ -756,7 +761,7 @@ picture{
 }
 
 #Pdescripcion{
-    margin-top: 30px;
+    padding-top: 50px;
     color: #363062;
     font-size: 20px;
     margin-left: 50px;
@@ -768,6 +773,7 @@ picture{
     margin-left: 50px;
     font-size: 48px;
     color: #F99417;
+    margin-left: 250px;
 }
 #compraBotones{
     display: flex;
@@ -840,101 +846,8 @@ audio::-webkit-media-controls-panel {
     margin-left: 47%;
 }
 
-.carrousel {
-  width: 90%;
-  max-width: 120em;
-  padding: 2em;
-  transition: all 0.4s ease;
-  overflow: hidden;
-  background-color: white;
-}
-
-.carrousel .grande {
-  width: 300%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  padding: 2em;
-  transition: all 0.5s ease;
-  transform: translateX(0%);
 
 
-}
-
-.carrousel .img {
-  width: calc( 100% / 3 - 3em);
-  min-height: 10vh;
-  transition: all 0.4s ease;
-  border-radius: 1em;
-}
-.carrousel .img:hover {
-    cursor: zoom-in;
-  }
-
-#agrandar{
-    display: none;
-    position: fixed;
-    background-color: lime;
-    width: 900px;
-    height: 900px;
-    top: 30px;
-    left: 400px
-}
-
-#agrandar #cerrar{
-    font-size:15px;
-    font-weight:800;
-    color: black;
-    background-color: #F99417;
-    border-radius: 100px;
-    width: 70px;
-    height: 40px;
-    margin-left: 23vw;
-    text-align: center;
-    align-items: center;
-}
-#agrandar #cerrar{
-    cursor: pointer; 
-}
-
-#agrandada{
-    width: 100%;
-    height: 100%;
-}
-
-
-.carrousel .puntos {
-  width: 20px;
-  margin: 1em 0 0;
-  padding: 0.4em;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 845px;
-  top: 838px
-}
-
-.carrousel .punto {
-  width: 1em;
-  height: 1em;
-  margin: 1em 1em 0;
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: #c57412;
-  list-style: none;
-}
-.carrousel .punto:hover {
-    cursor: pointer; 
-
-  }
-.carrousel .punto.activo {
-  background-color: #F99417;
-}
 
 #carritoIco{
     position: absolute;
@@ -980,9 +893,13 @@ audio::-webkit-media-controls-panel {
     color: black;
 
 }
-.producto img{
-    height: 80%;
+
+
+#productoDesc{
+    background-color: white;
+    width: 100%;
 }
+
 
 .producto button{
     height: 30px;
@@ -1011,4 +928,23 @@ audio::-webkit-media-controls-panel {
     font-size: 20px;
     color: #363062;
     margin-top: 20px;
+}
+
+#controles{
+    background-color: #4D4C7D;
+    text-align: center;
+
+
+}
+#controles p{
+    color: #363062;
+    font-size: 36px;
+}
+#controles2{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 20px;
+
+
 }

@@ -63,35 +63,11 @@ function Muestra(props) {
                 </tbody>
             </table>
             <div id="producto">
-                <div className="carrousel">
-                    <div className="grande">
-                        <img
-                            src={`../assets/img/${props.imagen}.png`}
-                            aria-describedby="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado"
-                            className="img"
-                        />
-                        <img
-                            src={`../assets/img/${props.img}.png`}
-                            aria-describedby="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado"
-                            className="img"
-                        />
-                        <img
-                            src={`../assets/img/${props.img}.png`}
-                            aria-describedby="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado"
-                            className="img"
-                        />
-                    </div>
-                    <div className="puntos">
-                        <ul>
-                            <li className="punto activo" />
-                            <li className="punto" />
-                            <li className="punto" />
-                        </ul>
-                    </div>
-                    <div id="agrandar">
-                        <img src="" id="agrandada" />
-                        <button id="cerrar">Cerrar</button>
-                    </div>
+                <div id="divImagen">
+                <img id="imagenProducto"
+                    src={`../assets/img/${props.imagen}.png`}
+                    aria-describedby="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado"
+                    />
                 </div>
                 <div id="productoDesc">
                     <h1>
@@ -110,11 +86,6 @@ function Muestra(props) {
                         <br />
                         <br />
                     </p>
-                    <div id="compraBotones">
-                        <p id="precio"> {props.precio}</p>
-                        <button id="añadir">Añadir a la cesta</button>
-                        <button>Comprar</button>
-                    </div>
                 </div>
             </div>
         </main>
