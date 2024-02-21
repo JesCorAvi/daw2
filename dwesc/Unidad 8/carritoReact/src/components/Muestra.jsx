@@ -1,10 +1,12 @@
 import '../css/style.css'
+import CarritoIco from './CarritoIco.jsx'
 
 
 function Muestra(props) {
 
     return (
         <main>
+			<CarritoIco/>
             <div id="bannerTienda">
                 <div id="cajaBannerTienda">
                     <h1>Tienda</h1>
@@ -23,50 +25,12 @@ function Muestra(props) {
                     <img src="../assets/img/flecha.png" alt="volver" />
                 </div>
             </a>
-            <table id="categorias">
-                <tbody>
-                    <tr>
-                        <th>
-                            <p>Componentes para tu coche: </p>
-                        </th>
-                        <td>
-                            <p>
-                                <a href="tienda.html">Ofertas</a>
-                            </p>
-                        </td>
-                        <td>
-                            <p>
-                                <a href="tienda.html">Llantas y neumáticos</a>
-                            </p>
-                        </td>
-                        <td>
-                            <p>
-                                <a href="tienda.html">Frenado</a>
-                            </p>
-                        </td>
-                        <td>
-                            <p>
-                                <a href="tienda.html">Piezas de Motor</a>
-                            </p>
-                        </td>
-                        <td>
-                            <p>
-                                <a href="tienda.html">Seguridad</a>
-                            </p>
-                        </td>
-                        <td>
-                            <p>
-                                <a href="tienda.html">Accesorios</a>
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            
             <div id="producto">
                 <div id="divImagen">
-                <img id="imagenProducto"
-                    src={`../assets/img/${props.imagen}.png`}
-                    aria-describedby="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado"
+                    <img id="imagenProducto"
+                        src={`../assets/img/${props.imagen}.png`}
+                        aria-describedby="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado"
                     />
                 </div>
                 <div id="productoDesc">

@@ -5,22 +5,22 @@ function Header() {
   return (
     <header>
       <nav aria-label="encabezado vertical fijado a la parte superior de la web">
-        <a href="index.html"><img src="../assets/img/logo.png" alt="Logo de web" width="130" height="50"/></a>
+        <a href="../pages/tienda.html"><img src="../assets/img/logo.png" alt="Logo de web" width="130" height="50" /></a>
         <ul>
           <li>
-            <button>Inicio</button>
+            <a href='../pages/tienda.html'>
+              <button>Tienda</button>
+            </a>
           </li>
           <li>
-            <button aria-current="page" className="selected">Tienda</button>
+            <a href='../pages/nosotros.html'>
+              <button>Sobre nosotros</button>
+            </a>
           </li>
           <li>
-            <button >Mi cuenta</button>
-          </li>
-          <li>
-            <button >Sobre nosotros</button>
-          </li>
-          <li>
-            <button >Ayuda</button>
+            <a href='../pages/ayuda.html'>
+              <button>Ayuda</button>
+            </a>
           </li>
         </ul>
       </nav>

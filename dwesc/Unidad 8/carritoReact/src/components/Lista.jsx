@@ -13,7 +13,7 @@ function Lista() {
 			return <Producto key={producto.nombre} img={producto.imagen}  text={producto.nombre} cant={producto.cantidad}/>
 		})
 		}
-		<Button text="Comprar"/>
+		<Button accion="Comprar"/>
     </div>
   )
 }

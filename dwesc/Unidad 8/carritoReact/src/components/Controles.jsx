@@ -8,7 +8,10 @@ function Controles(props) {
 	<div id="controles">
 		<div id="controles2">
 		<p>{props.precio}</p>
-		<Button text={props.text}/>
+		<Button 
+			accion={props.accion} 
+			click={props.click}
+		/>
 		</div>
 	</div>
   )

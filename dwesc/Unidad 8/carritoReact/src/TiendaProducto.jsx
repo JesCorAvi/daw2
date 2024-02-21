@@ -11,7 +11,9 @@ import './css/style.css';
 function TiendaProducto() {
   const urlCadena = queryString.parse(window.location.search);
   const idProducto = urlCadena.productoId;
-  
+  function añadirProductoAlCarrito() {
+    fetch('http://0.0.0.0:8000/carrito.php?id_producto=' + idProducto) 
+  }
   
     return (
       <React.StrictMode>
@@ -21,7 +23,11 @@ function TiendaProducto() {
           descripcion={tiendaLista.tienda[idProducto].descripcion}
           imagen={tiendaLista.tienda[idProducto].imagen}
         />
-        <Controles precio={tiendaLista.tienda[idProducto].precio} text="Comprar"/>
+        <Controles 
+          precio={tiendaLista.tienda[idProducto].precio} 
+          accion="Añadir a la cesta" 
+          click={añadirProductoAlCarrito}
+        />
         <Footer />
       </React.StrictMode>
     );
