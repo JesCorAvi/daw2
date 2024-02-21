@@ -1,26 +1,27 @@
 import '../css/style.css'
+import { Link } from 'react-router-dom';
 
 function Header() {
 
   return (
     <header>
       <nav aria-label="encabezado vertical fijado a la parte superior de la web">
-        <a href="../pages/tienda.html"><img src="../assets/img/logo.png" alt="Logo de web" width="130" height="50" /></a>
+        <Link to="/"><img src="/src/assets/img/logo.png" alt="Logo de web" width="130" height="50" /></Link>
         <ul>
           <li>
-            <a href='../pages/tienda.html'>
+          <Link to="/">
               <button>Tienda</button>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='../pages/nosotros.html'>
+          <Link to="/nosotros">
               <button>Sobre nosotros</button>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='../pages/ayuda.html'>
+            <Link to="/ayuda">
               <button>Ayuda</button>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

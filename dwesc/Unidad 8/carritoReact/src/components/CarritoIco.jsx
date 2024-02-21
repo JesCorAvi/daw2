@@ -1,15 +1,16 @@
 import '../css/style.css'
+import { Link } from 'react-router-dom';
 
 
 function Button(props) {
 
   return (
     <>
-        <a href="carrito.html">
+        <Link to="/carrito">
             <div id="carritoIco">
-                <img src="../assets/img/carrito-de-compras.png" alt="" />
+                <img src="/src/assets/img/carrito-de-compras.png" alt="" />
             </div>
-        </a>
+        </Link>
     </>
   )
 }

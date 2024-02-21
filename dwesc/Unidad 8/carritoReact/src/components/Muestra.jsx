@@ -1,6 +1,6 @@
 import '../css/style.css'
 import CarritoIco from './CarritoIco.jsx'
-
+import { Link } from 'react-router-dom';
 
 function Muestra(props) {
 
@@ -20,16 +20,16 @@ function Muestra(props) {
                     <button>Buscar</button>
                 </div>
             </div>
-            <a href="tienda.html">
+            <Link to="/">
                 <div id="atras">
-                    <img src="../assets/img/flecha.png" alt="volver" />
+                    <img src="/src/assets/img/flecha.png" alt="volver" />
                 </div>
-            </a>
+            </Link>
             
             <div id="producto">
                 <div id="divImagen">
                     <img id="imagenProducto"
-                        src={`../assets/img/${props.imagen}.png`}
+                        src={`/src/assets/img/${props.imagen}.png`}
                         aria-describedby="Modelo M Double Spoke, tamaño 18 pulgadas.Estas ruedas se encontraban en un BMW Serie 3 y están en excelente estado"
                     />
                 </div>
@@ -38,11 +38,11 @@ function Muestra(props) {
                         {props.nombre}
                     </h1>
                     <div id="puntaje">
-                        <img src="../assets/img/estrella.png" alt="estrella" />
-                        <img src="../assets/img/estrella.png" alt="estrella" />
-                        <img src="../assets/img/estrella.png" alt="estrella" />
-                        <img src="../assets/img/estrella.png" alt="estrella" />
-                        <img src="../assets/img/estrella.png" alt="estrella" />
+                        <img src="/src/assets/img/estrella.png" alt="estrella" />
+                        <img src="/src/assets/img/estrella.png" alt="estrella" />
+                        <img src="/src/assets/img/estrella.png" alt="estrella" />
+                        <img src="/src/assets/img/estrella.png" alt="estrella" />
+                        <img src="/src/assets/img/estrella.png" alt="estrella" />
                         <p>4.5/5</p>
                     </div>
                     <p id="Pdescripcion">

@@ -881,7 +881,7 @@ audio::-webkit-media-controls-panel {
 .producto{
     display: flex;
     background-color: white;
-    width: 800px;
+    width: 1000px;
     height: 150px;
     margin: 0 auto;
     text-align: left;

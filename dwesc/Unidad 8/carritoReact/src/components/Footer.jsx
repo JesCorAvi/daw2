@@ -21,10 +21,10 @@ function Footer() {
         </ul>
         <ul>
             <li className="footer-titulo">Redes sociales</li>
-            <li className="footer-rrss"><img src="../img/facebook.svg" alt="Logo de facebook"/><a href="">Facebook</a></li>
-            <li className="footer-rrss"><img src="../img/instagram.svg" alt="Logo de twitter"/><a href="">Instagram</a></li>
+            <li className="footer-rrss"><img src="/src/assets/img/facebook.svg" alt="Logo de facebook"/><a href="">Facebook</a></li>
+            <li className="footer-rrss"><img src="/src/assets/img/instagram.svg" alt="Logo de twitter"/><a href="">Instagram</a></li>
         </ul>
-        <img id="cc" src="../img/cc.svg" alt="Licencia Creative Commons"/>
+        <img id="cc" src="/src/assets/img/cc.svg" alt="Licencia Creative Commons"/>
     </footer>
   )
 }

@@ -1,5 +1,7 @@
 import '../css/style.css'
 import CarritoIco from './CarritoIco.jsx'
+import { Link } from 'react-router-dom';
+
 
 
 function Tienda(props) {
@@ -27,59 +29,59 @@ function Tienda(props) {
 				<div className="segmento" id="segmento1" wai-aria="section">
 					<p className="segmento-titulo">Ofertas</p>
 					<button>Ver más...</button>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=0">
+					<Link to="/tiendaProducto?productoId=0">
 						<img
-							src="../assets/img/tienda1.png"
+							src="/src/assets/img/tienda1.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=1">
+					</Link>
+					<Link to="/tiendaProducto?productoId=1">
 						<img
-							src="../assets/img/tienda2.png"
+							src="/src/assets/img/tienda2.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=2">
+					</Link>
+					<Link to="/tiendaProducto?productoId=2">
 						<img
-							src="../assets/img/tienda3.png"
+							src="/src/assets/img/tienda3.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=3">
+					</Link>
+					<Link to="/tiendaProducto?productoId=3">
 						{" "}
 						<img
-							src="../assets/img/tienda4.png"
+							src="/src/assets/img/tienda4.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=4">
+					</Link>
+					<Link to="/tiendaProducto?productoId=4">
 						{" "}
 						<img
-							src="../assets/img/tienda5.png"
+							src="/src/assets/img/tienda5.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=5">
+					</Link>
+					<Link to="/tiendaProducto?productoId=5">
 						{" "}
 						<img
-							src="../assets/img/tienda6.png"
+							src="/src/assets/img/tienda6.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=6">
+					</Link>
+					<Link to="/tiendaProducto?productoId=6">
 						{" "}
 						<img
-							src="../assets/img/tienda7.png"
+							src="/src/assets/img/tienda7.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
-					<a name="enlaceProducto" href="../pages/tiendaProducto.html?productoId=7">
+					</Link>
+					<Link to="/tiendaProducto?productoId=7">
 						{" "}
 						<img
-							src="../assets/img/tienda8.png"
+							src="/src/assets/img/tienda8.png"
 							alt="Enlace a producto Rueda de audi"
 						/>
-					</a>
+					</Link>
 					<p className="desc">Neumático...</p>
 					<p className="desc">Correa de...</p>
 					<p className="desc">Escape...</p>
@@ -93,35 +95,35 @@ function Tienda(props) {
 					<p className="segmento-titulo">Neumáticos</p>
 					<button>Ver más...</button>
 					<img
-						src="../assets/img/tienda8.png"
+						src="/src/assets/img/tienda8.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda4.png"
+						src="/src/assets/img/tienda4.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda3.png"
+						src="/src/assets/img/tienda3.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda6.png"
+						src="/src/assets/img/tienda6.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda5.png"
+						src="/src/assets/img/tienda5.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda5.png"
+						src="/src/assets/img/tienda5.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda7.png"
+						src="/src/assets/img/tienda7.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda1.png"
+						src="/src/assets/img/tienda1.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<p className="desc">Neumático...</p>
@@ -136,35 +138,35 @@ function Tienda(props) {
 					<p className="segmento-titulo">Frenado</p>
 					<button>Ver más...</button>
 					<img
-						src="../assets/img/tienda1.png"
+						src="/src/assets/img/tienda1.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda2.png"
+						src="/src/assets/img/tienda2.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda7.png"
+						src="/src/assets/img/tienda7.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda6.png"
+						src="/src/assets/img/tienda6.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda3.png"
+						src="/src/assets/img/tienda3.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda6.png"
-						alt="Enlace a producto Rueda de audi"
+						src="/src/assets/img/tienda6.png"
+						alt = " producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda5.png"
+						src="/src/assets/img/tienda5.png"
 						aalt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda8.png"
+						src="/src/assets/img/tienda8.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<p className="desc">Neumático...</p>
@@ -179,35 +181,35 @@ function Tienda(props) {
 					<p className="segmento-titulo">Piezas de motor</p>
 					<button>Ver más...</button>
 					<img
-						src="../assets/img/tienda1.png"
+						src="/src/assets/img/tienda1.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda8.png"
+						src="/src/assets/img/tienda8.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda7.png"
+						src="/src/assets/img/tienda7.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda5.png"
+						src="/src/assets/img/tienda5.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda2.png"
+						src="/src/assets/img/tienda2.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda4.png"
+						src="/src/assets/img/tienda4.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda2.png"
+						src="/src/assets/img/tienda2.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda1.png"
+						src="/src/assets/img/tienda1.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<p className="desc">Neumático...</p>
@@ -222,35 +224,35 @@ function Tienda(props) {
 					<p className="segmento-titulo">Seguridad</p>
 					<button>Ver más...</button>
 					<img
-						src="../assets/img/tienda8.png"
+						src="/src/assets/img/tienda8.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda7.png"
+						src ="/src/assets/img/tienda7.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda6.png"
+						src ="/src/assets/img/tienda6.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda5.png"
+						src ="/src/assets/img/tienda5.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda4.png"
+						src ="/src/assets/img/tienda4.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda3.png"
+						src ="/src/assets/img/tienda3.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda2.png"
+						src ="/src/assets/img/tienda2.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda1.png"
+						src ="/src/assets/img/tienda1.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<p className="desc">Neumático...</p>
@@ -265,35 +267,35 @@ function Tienda(props) {
 					<p className="segmento-titulo">Accesorios</p>
 					<button>Ver más...</button>
 					<img
-						src="../assets/img/tienda2.png"
+						src="/src/assets/img/tienda2.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda1.png"
+						src="/src/assets/img/tienda1.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda4.png"
+						src="/src/assets/img/tienda4.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda3.png"
+						src="/src/assets/img/tienda3.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda6.png"
+						src="/src/assets/img/tienda6.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda5.png"
+						src="/src/assets/img/tienda5.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda8.png"
+						src="/src/assets/img/tienda8.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<img
-						src="../assets/img/tienda7.png"
+						src="/src/assets/img/tienda7.png"
 						alt="Enlace a producto Rueda de audi"
 					/>
 					<p className="desc">Neumático...</p>
