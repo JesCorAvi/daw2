@@ -846,9 +846,6 @@ audio::-webkit-media-controls-panel {
     margin-left: 47%;
 }
 
-
-
-
 #carritoIco{
     position: absolute;
     top: 100px;
@@ -899,17 +896,29 @@ audio::-webkit-media-controls-panel {
 .producto{
     display: flex;
     background-color: white;
-    width: 1000px;
-    height: 150px;
+    width: 1200px;
+    height: 250px;
     margin: 0 auto;
     text-align: left;
-    border: solid 1px black;
+    border: solid 2px #363062;
 }
-.producto p{
+.producto img{
+    margin: 10px;
+    border: lightgray solid 2px;
+}
+.productoT{
     padding: 20px;
-    font-size: 20px;
+    font-size: 25px;
+    width: 700px;
     color: black;
 
+}
+.productoD{
+    padding: 20px;
+    font-size: 20px;
+    width: 700px;
+    color: gray;
+    text-align: justify;
 }
 
 
@@ -926,8 +935,17 @@ audio::-webkit-media-controls-panel {
 .productoInfo{
     margin-left: auto;
 }
+.productoInfo button{
+    width: 30px;
+    margin: 10px;
+    background-color: #363062;
+    color: white;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
 .productoInfo p{
-    font-size: 15px;
+    font-size: 20px;
 }
 .producto a{
     color: black;
@@ -963,6 +981,60 @@ audio::-webkit-media-controls-panel {
     margin-left: 10%;
     margin-right: 10%;
     padding-bottom: 20px;
+}
+
+#total{
+    margin-top: 20px;
+    font-size: 30px;
+}
+#cantidadDiv{
+    margin-left: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-right: 10px;
+    margin-top: 18px;
+
+}
+
+#cantidad1{
+    font-weight: 700;
+    margin-left: 15px;
+    color: #363062;
+    font-size: 20px;
+}
+#cantidad2{
+    color: #363062;
+
+}
+
+#precioDiv{
+    margin-top: 60px;
+    margin-left: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-right: 10px;
+
+
+}
+
+#precio1{
+    font-weight: 700;
+    text-align: center;
+    color: #363062;
+    font-size: 20px;
+}
+#precio2{
+    color: #363062;
+    text-align: center;
+
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
 
 
 }

@@ -29,15 +29,24 @@ function Producto(props) {
 
 		<div className="producto">
 			<img src={`/src/assets/img/${props.img}.png`} alt={props.text} />
-			<p>{props.text}</p>
+				<div>
+					<p className="productoT">{props.text}</p>
+					<p className="productoD">{props.descripcion}</p>
+
+				</div>
 			<div className="productoInfo">
-				<p> Cantidad </p>
-				<p>
+				<div id="cantidadDiv">
+				<p id="cantidad1">    Cantidad </p>
+				<p id="cantidad2">
 					<button onClick={disminuirJson}>-</button>
 					{props.cant}
 					<button onClick={aumentarJson}>+</button>
 				</p>
-				<p>{`Precio: ${props.precio}`}</p>
+				</div>
+				<div id="precioDiv">
+				<p id="precio1">Precio</p> 
+				<p id="precio2">{props.precio}</p>
+				</div>
 			</div>
 		</div>
 	)
