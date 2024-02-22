@@ -10,6 +10,12 @@ function TiendaProducto() {
   const idProducto = urlCadena.productoId;
   function añadirProductoAlCarrito() {
     fetch('http://0.0.0.0:8000/src/carrito.php?id_producto=' + idProducto) 
+    .then(response => {
+      if (response.ok) {
+        // Si la respuesta es exitosa (código de estado 200-299), muestra el mensaje
+        window.alert("Producto añadido al carrito")
+      }
+    })
   }
   
     return (

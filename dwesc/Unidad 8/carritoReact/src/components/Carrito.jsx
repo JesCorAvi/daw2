@@ -6,6 +6,8 @@ import carritoJson from '../carrito.json';
 
 function Carrito() {
 
+
+  
   return (
     <div id="carrito">
         <h1>Carrito</h1>
@@ -16,6 +18,7 @@ function Carrito() {
         text={producto.nombre} 
         cant={producto.cantidad} 
         precio = {producto.precio}
+
       />
 		})
 		}

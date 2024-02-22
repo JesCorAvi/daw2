@@ -858,6 +858,24 @@ audio::-webkit-media-controls-panel {
     background-color: #F99417;
     border-radius: 50px;
 }
+
+#carritoNum{
+    position: absolute;
+    top: 140px;
+    right: 80px;
+    width: 40px;
+    height: 40px;
+    background-color: #F99417;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #363062;
+}
+#carritoNum p{
+    margin-top: 8px;
+    color: white;
+    font-size: 20px;
+}
+
 #carritoIco img{
     margin-top: 10px;
     display: block;
