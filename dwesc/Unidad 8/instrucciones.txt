@@ -1,0 +1,11 @@
+Para que el proyecto funcione correctamente, es necesario ejecutar 
+dentro del proyecto los siguientes comandos:
+
+npm run dev (y acceder al proyecto desde el enlace que proporciona)
+
+php -S 0.0.0.0:8000 -t . (dejar abierto mientras se navega) 
+
+Es muy importante que la ip del php sea 0.0.0.0:8000, ya que el
+fetch envia las peticiones al servidor http://0.0.0.0:8000/
+
+

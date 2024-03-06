@@ -1038,3 +1038,15 @@ audio::-webkit-media-controls-panel {
 
 
 }
+
+#borrar{
+
+    background-color: #363062;
+    border-radius: 20px;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 700px;
+}

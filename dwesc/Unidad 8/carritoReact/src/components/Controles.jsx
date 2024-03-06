@@ -11,6 +11,7 @@ function Controles(props) {
 		<Button 
 			accion={props.accion} 
 			click={props.click}
+			id="button"
 		/>
 		</div>
 	</div>

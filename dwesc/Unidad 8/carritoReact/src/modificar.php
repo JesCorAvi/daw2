@@ -11,7 +11,7 @@ if($tipo == '+'){
             $producto['cantidad'] += 1;
         }
 }
-}else{
+}elseif($tipo == '-'){
     foreach ($carrito['carrito'] as &$producto) {
         if ($producto['nombre'] == $input) {
             $producto['cantidad'] -= 1;
@@ -21,8 +21,12 @@ if($tipo == '+'){
                 $carrito['carrito'] = array_values($carrito['carrito']);
             }
         }
-} 
 }
+    
+}elseif($tipo == 'todos'){
+        $carrito['carrito'] = array();
+}
+
 
 file_put_contents('carrito.json', json_encode($carrito));
 

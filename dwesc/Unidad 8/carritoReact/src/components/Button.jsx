@@ -4,7 +4,7 @@ import '../css/style.css'
 function Button(props) {
 
   return (
-	<button id="button" onClick={props.click}>
+	<button id={props.id} onClick={props.click}>
 		{props.accion}
 	</button>
   )

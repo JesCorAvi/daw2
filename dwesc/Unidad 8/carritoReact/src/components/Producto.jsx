@@ -12,6 +12,7 @@ function Producto(props) {
 				id_producto: props.text,
 				tipo: '+'
 			})
+			
 		})
 	}
 	const disminuirJson = () => {

@@ -53,11 +53,11 @@ function Nosotros(props) {
 								proporcionar un servicio excepcional.
 							</p>
 							<picture>
-								<source media="(max-width: 450px)" srcSet="../assets/img/imagen1indexs.png" />
-								<source media="(max-width: 820px)" srcSet="../assets/img/imagen1indexm.png" />
-								<source media="(min-width: 451px)" srcSet="../assets/img/imagen1index.png" />
+								<source media="(max-width: 450px)" srcSet="../src/assets/img/imagen1indexs.png" />
+								<source media="(max-width: 820px)" srcSet="../src/assets/img/imagen1indexm.png" />
+								<source media="(min-width: 451px)" srcSet="../src/assets/img/imagen1index.png" />
 								<img
-									src="../assets/img/imagen1index.png"
+									src="../assets/img/src/imagen1index.png"
 									alt="Mecánico trabajando en Recreate"
 								/>
 							</picture>
